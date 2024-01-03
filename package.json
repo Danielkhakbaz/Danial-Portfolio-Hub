@@ -2,7 +2,8 @@
   "name": "danial-portfolio-hub",
   "version": "0.1.0",
   "private": true,
-  "author": "Danial Khakbaz",
+  "author": "Danial Khakbaz<danialkhakbaz.dk@gmail.com>",
+  "description": "Danial Khakbaz's Portfolio built with next.js",
   "keywords": [
     "portfolio",
     "danial khakbaz",

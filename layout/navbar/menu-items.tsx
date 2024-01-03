@@ -116,23 +116,22 @@ export const MobileMenuItems = () => {
           const isActive = path === link;
 
           return (
-            <>
-              <MenuItem
-                as={Link}
-                href={link}
-                icon={mobileIcon}
-                color={
-                  isActive ? useColorModeValue("purple", "orange") : undefined
-                }
-                _hover={{
-                  color: isActive
-                    ? undefined
-                    : useColorModeValue("purple.800", "orange.200"),
-                }}
-              >
-                {label}
-              </MenuItem>
-            </>
+            <MenuItem
+              key={label}
+              as={Link}
+              href={link}
+              icon={mobileIcon}
+              color={
+                isActive ? useColorModeValue("purple", "orange") : undefined
+              }
+              _hover={{
+                color: isActive
+                  ? undefined
+                  : useColorModeValue("purple.800", "orange.200"),
+              }}
+            >
+              {label}
+            </MenuItem>
           );
         })}
       </MenuList>

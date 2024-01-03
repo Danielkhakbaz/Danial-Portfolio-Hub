@@ -1,8 +1,8 @@
 "use client";
 
 import { AnimatePresence } from "framer-motion";
-import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import MotionComponent from "components/motion/motion";
+import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { FaRegMoon, FaRegSun } from "react-icons/fa";
 
 const ThemeController = () => {

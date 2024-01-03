@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Container } from "@chakra-ui/react";
-import { ChakraProvider } from "providers/chakra-provider";
 import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
+import { ChakraProvider } from "providers/chakra-provider";
+import { Container } from "@chakra-ui/react";
 import "styles/globals.css";
 
 type RootLayoutProps = {

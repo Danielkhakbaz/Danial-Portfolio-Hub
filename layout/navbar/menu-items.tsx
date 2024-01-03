@@ -1,8 +1,8 @@
 "use client";
 
-import { ReactElement } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MotionComponent from "components/motion/motion";
 import {
   Flex,
   Menu,
@@ -12,15 +12,21 @@ import {
   MenuList,
   useColorModeValue,
 } from "@chakra-ui/react";
-import MotionComponent from "components/motion/motion";
-import { FaQuestion, FaBars, FaHome, FaCode, FaComments } from "react-icons/fa";
-import { FaLayerGroup, FaMoneyBill1Wave } from "react-icons/fa6";
+import {
+  FaHome,
+  FaLayerGroup,
+  FaMoneyBillWave,
+  FaCode,
+  FaQuestion,
+  FaComments,
+  FaBars,
+} from "react-icons/fa";
 
 type MenuItemsType = {
   link: string;
   label: string;
-  icon?: ReactElement;
-  mobileIcon?: ReactElement;
+  icon?: React.ReactElement;
+  mobileIcon?: React.ReactElement;
 };
 
 const menuItems: MenuItemsType[] = [
@@ -37,7 +43,7 @@ const menuItems: MenuItemsType[] = [
   {
     link: "/experiences",
     label: "Experiences",
-    mobileIcon: <FaMoneyBill1Wave style={{ fontSize: "15px" }} />,
+    mobileIcon: <FaMoneyBillWave style={{ fontSize: "15px" }} />,
   },
   {
     link: "/blog",
@@ -67,8 +73,6 @@ export const WebMenuItems = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              gap: "4",
             }}
           >
             <Flex

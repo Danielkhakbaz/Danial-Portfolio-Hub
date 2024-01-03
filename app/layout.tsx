@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ChakraProvider } from "app/chakra-provider";
+import { Container } from "@chakra-ui/react";
+import { ChakraProvider } from "providers/chakra-provider";
 import Navbar from "layout/navbar/navbar";
 import "styles/globals.css";
 
@@ -21,7 +22,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
       <body className={inter.className}>
         <ChakraProvider>
           <Navbar />
-          {children}
+          <Container maxWidth="container.sm">{children}</Container>
         </ChakraProvider>
       </body>
     </html>

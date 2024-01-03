@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Container } from "@chakra-ui/react";
 import { ChakraProvider } from "providers/chakra-provider";
 import Navbar from "layout/navbar/navbar";
+import Footer from "layout/footer/footer";
 import "styles/globals.css";
 
 type RootLayoutProps = {
@@ -23,6 +24,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
         <ChakraProvider>
           <Navbar />
           <Container maxWidth="container.sm">{children}</Container>
+          <Footer />
         </ChakraProvider>
       </body>
     </html>

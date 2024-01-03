@@ -53,7 +53,6 @@ const menuItems: MenuItemsType[] = [
 ];
 
 export const WebMenuItems = () => {
-  
   const path = usePathname();
 
   return (

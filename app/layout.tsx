@@ -23,7 +23,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
       <body className={inter.className}>
         <ChakraProvider>
           <Navbar />
-          <Container maxWidth="container.sm">{children}</Container>
+          <Container maxWidth="container.sm" paddingY={6}>{children}</Container>
           <Footer />
         </ChakraProvider>
       </body>

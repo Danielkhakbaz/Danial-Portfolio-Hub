@@ -13,7 +13,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.25 }}
-      style={{ display: "inline-block" }}
+      style={{ width: "100%", display: "inline-block" }}
     >
       {children}
     </MotionComponent>

@@ -3,10 +3,10 @@ import { Center } from "@chakra-ui/react";
 const FavQuote = async () => {
   return (
     <Center
-      backgroundColor="coral"
+      backgroundColor="blackAlpha.900"
       color="white"
       borderRadius={10}
-      paddingY={6}
+      paddingY={5}
     >
       Fav Quote
     </Center>

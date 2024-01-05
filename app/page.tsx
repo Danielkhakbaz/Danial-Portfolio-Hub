@@ -1,6 +1,6 @@
 import PageTransition from "components/page-transition/page-transition";
-import ImagesGrid from "components/images-grid/images-grid";
-import FavQuote from "components/fav-quote/fav-quote";
+import ImagesGrid from "app/_components/images-grid/images-grid";
+import FavQuote from "app/_components/fav-quote/fav-quote";
 import { Flex } from "@chakra-ui/react";
 
 const HomePage = () => {

@@ -77,6 +77,7 @@ export const WebMenuItems = () => {
           >
             <Flex
               alignItems="center"
+              transition="color 0.1s ease-in-out"
               _hover={{
                 color: isActive ? useColorModeValue("black", "white") : "gray",
               }}

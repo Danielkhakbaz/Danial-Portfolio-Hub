@@ -10,7 +10,7 @@ import LinksSection from "app/_components/homepage-section/links-section/links-s
 import EducationSection from "app/_components/homepage-section/education-section/education-section";
 import { Flex } from "@chakra-ui/react";
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
     <PageTransition>
       <Flex flexDirection="column" gap={6}>

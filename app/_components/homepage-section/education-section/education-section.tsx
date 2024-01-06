@@ -7,7 +7,7 @@ import AzadUniversityLogo from "assets/logos/azad-university-logo.jpeg";
 
 const EducationSection = () => {
   return (
-    <Flex flexDirection="column" gap={6} marginY={4}>
+    <Flex flexDirection="column" gap={6}>
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         gap={{ base: 2, md: 6 }}

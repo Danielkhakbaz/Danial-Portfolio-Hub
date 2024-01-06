@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
 
 type SectionProps = {
   title: string;
@@ -16,7 +16,7 @@ const HomePageSection = async ({ title, children }: SectionProps) => {
       >
         {title}
       </Text>
-      {children}
+      <Box marginY={2}>{children}</Box>
     </Flex>
   );
 };

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DownloadButton from "app/_components/homepage-section/about-section/download-button";
 import { Flex, Text, Button } from "@chakra-ui/react";
 import { FaAngleRight } from "react-icons/fa6";
 
@@ -14,13 +15,14 @@ const AboutSection = async () => {
         harum quam excepturi quos, ea nobis dignissimos fuga recusandae impedit
         laborum sapiente fugiat aut animi!
       </Text>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" gap={2}>
         <Link href="/projects">
           <Button colorScheme="yellow" display="flex" gap={2}>
             <Text>My Portfolio</Text>
             <FaAngleRight />
           </Button>
         </Link>
+        <DownloadButton />
       </Flex>
     </Flex>
   );

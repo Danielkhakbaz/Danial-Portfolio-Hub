@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Flex, Heading, Text, Center } from "@chakra-ui/react";
-import { ImageBorder } from "app/_components/summary/image-border";
+import { ImageBorder } from "components/image-border/image-border";
 import DanialKhakbazProfile from "assets/images/danial-khakbaz.jpg";
 
 const Summary = () => {

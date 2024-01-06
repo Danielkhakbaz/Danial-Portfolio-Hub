@@ -15,7 +15,11 @@ const AboutSection = async () => {
         harum quam excepturi quos, ea nobis dignissimos fuga recusandae impedit
         laborum sapiente fugiat aut animi!
       </Text>
-      <Flex justifyContent="center" gap={2}>
+      <Flex
+        flexDirection={{ base: "column", sm: "row" }}
+        justifyContent="center"
+        gap={2}
+      >
         <Link href="/projects">
           <Button colorScheme="yellow" display="flex" gap={2}>
             <Text>My Portfolio</Text>

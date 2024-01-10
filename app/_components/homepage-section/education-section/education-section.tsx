@@ -37,7 +37,7 @@ const EducationSection = () => {
           >
             B.S in Computer Engineering
             <Text fontWeight="bold" fontSize={12} opacity={0.6}>
-              (2018-2022)
+              (2018-2023)
             </Text>
           </Heading>
           <Flex flexDirection="column">

@@ -69,8 +69,8 @@ const InterestsSection = async () => {
             <Text fontWeight="bolder" display="inline">
               Zedbazi, Mehrad Hidden, Wantons, Twenty One Pilots, and many more
             </Text>
-            . Don&apos;t hesitate to follow me on Spotify; let&apos;s
-            connect through the beats We love.
+            . Don&apos;t hesitate to follow me on Spotify; let&apos;s connect
+            through the beats We love.
           </Text>
         }
         backgroundColor="purple.300"

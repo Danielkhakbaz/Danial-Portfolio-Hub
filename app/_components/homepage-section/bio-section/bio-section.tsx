@@ -1,7 +1,7 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type SectionCreatorProps = {
-  year: number;
+  year: number | string;
   content: React.ReactElement;
 };
 
@@ -17,10 +17,29 @@ const SectionCreator = async ({ year, content }: SectionCreatorProps) => {
 const BioSection = async () => {
   return (
     <Flex flexDirection="column" gap={2}>
-      <SectionCreator year={2000} content={<Text>Born in Tehran 1.</Text>} />
-      <SectionCreator year={2001} content={<Text>Born in Tehran 2.</Text>} />
-      <SectionCreator year={2002} content={<Text>Born in Tehran 3.</Text>} />
-      <SectionCreator year={2003} content={<Text>Born in Tehran 4.</Text>} />
+      <SectionCreator
+        year={2000}
+        content={<Text>Born in Tehran, Iran.</Text>}
+      />
+      <SectionCreator
+        year={2019}
+        content={
+          <Text>Started my professional career as a Front-end Engineer.</Text>
+        }
+      />
+      <SectionCreator
+        year={2023}
+        content={
+          <Text>
+            Successfully completed the Bachelor&apos;s Program in Computer
+            Engineering.
+          </Text>
+        }
+      />
+      <SectionCreator
+        year={`2023 till now`}
+        content={<Text>So much happend :)</Text>}
+      />
     </Flex>
   );
 };

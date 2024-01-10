@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ThemeController from "components/theme-controller/theme-controller";
-import { WebMenuItems, MobileMenuItems } from "layout/navbar/menu-items";
+import { WebMenuItems, MobileMenuItems } from "./menu/menu-items";
 import { Container, Flex, Text, Heading } from "@chakra-ui/react";
 
 const Navbar = async () => {

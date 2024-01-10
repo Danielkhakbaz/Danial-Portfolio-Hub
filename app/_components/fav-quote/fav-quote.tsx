@@ -1,6 +1,6 @@
 import { Center, Text, Flex } from "@chakra-ui/react";
 
-const FavQuote = () => {
+const FavQuote = async () => {
   const randomNumberBetween0and2 = Math.floor(Math.random() * 3);
 
   const Quotes = [

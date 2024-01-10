@@ -1,7 +1,6 @@
 import Link from "next/link";
-import DownloadButton from "app/_components/homepage-section/about-section/download-button";
 import { Flex, Text, Button } from "@chakra-ui/react";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight, FaCircleArrowDown } from "react-icons/fa6";
 
 const AboutSection = async () => {
   return (
@@ -27,7 +26,16 @@ const AboutSection = async () => {
             <FaAngleRight />
           </Button>
         </Link>
-        <DownloadButton />
+        <Link
+          href="/pdf/Danial_Khakbaz_Resume.pdf"
+          target="_blank"
+          locale={false}
+        >
+          <Button colorScheme="green" display="flex" gap={2}>
+            <Text>Download CV</Text>
+            <FaCircleArrowDown />
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );

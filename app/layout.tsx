@@ -4,7 +4,6 @@ import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
 import { ChakraProvider } from "providers/chakra-provider";
 import { Container } from "@chakra-ui/react";
-import "styles/globals.css";
 
 type RootLayoutProps = {
   children: React.ReactNode;

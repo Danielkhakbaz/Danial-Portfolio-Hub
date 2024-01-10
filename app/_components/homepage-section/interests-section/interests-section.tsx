@@ -1,4 +1,4 @@
-import { Flex, Tooltip, Badge, Text } from "@chakra-ui/react";
+import { Flex, Tooltip, Text, Badge } from "@chakra-ui/react";
 
 const InterestsSection = async () => {
   return (

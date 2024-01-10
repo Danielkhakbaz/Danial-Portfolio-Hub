@@ -1,10 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import { Flex } from "@chakra-ui/react";
 import { socials } from "app/_components/homepage-section/links-section/socials";
 
-const LinksSection = () => {
+const LinksSection = async () => {
   return (
     <Flex flexWrap="wrap" justifyContent="space-between" gap={4}>
       {socials.map((social) => (

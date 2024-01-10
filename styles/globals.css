@@ -1,6 +1,0 @@
-.homepage__links--hover {
-  transition: opacity 0.2s;
-}
-.homepage__links--hover:hover {
-  opacity: 0.85;
-}

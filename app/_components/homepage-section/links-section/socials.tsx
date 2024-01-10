@@ -7,6 +7,7 @@ import {
   FaSpotify,
 } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
+import styles from "app/_components/homepage-section/links-section/links-section.module.css";
 
 type SocialsType = {
   link: string;
@@ -18,9 +19,8 @@ export const socials: SocialsType[] = [
     link: "mailto:danialkhakbaz.dk@gmail.com",
     logo: (
       <FaEnvelope
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#D3D3D3",
         }}
       />
@@ -30,9 +30,8 @@ export const socials: SocialsType[] = [
     link: "https://t.me/danielkhakbaz",
     logo: (
       <FaTelegramPlane
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#0088CC",
         }}
       />
@@ -42,9 +41,8 @@ export const socials: SocialsType[] = [
     link: "https://twitter.com/danielkhakbaz",
     logo: (
       <FaXTwitter
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#1DA1F2",
         }}
       />
@@ -54,9 +52,8 @@ export const socials: SocialsType[] = [
     link: "https://www.instagram.com/danielkhakbaz/",
     logo: (
       <FaInstagram
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#DD2A7B",
         }}
       />
@@ -66,9 +63,8 @@ export const socials: SocialsType[] = [
     link: "https://github.com/danielkhakbaz",
     logo: (
       <FaGithub
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#818288",
         }}
       />
@@ -78,9 +74,8 @@ export const socials: SocialsType[] = [
     link: "https://www.linkedin.com/in/danielkhakbaz/",
     logo: (
       <FaLinkedinIn
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#0077B5",
         }}
       />
@@ -90,9 +85,8 @@ export const socials: SocialsType[] = [
     link: "https://open.spotify.com/user/3p0q2i0j7g4e0vo9hc0kkpmov?si=22691cd459ad4736&nd=1",
     logo: (
       <FaSpotify
-        className="homepage__links--hover"
+        className={styles.links__section__item}
         style={{
-          fontSize: 30,
           color: "#1ED760",
         }}
       />

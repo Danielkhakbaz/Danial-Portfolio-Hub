@@ -1,16 +1,8 @@
-"use client";
-
-import Image from "next/image";
-import {
-  Flex,
-  Heading,
-  Text,
-  Center,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Heading, Text, Center } from "@chakra-ui/react";
+import CustomImageWithBorder from "components/custom-image-with-border/custom-image-with-border";
 import DanialKhakbazProfile from "assets/images/danial-khakbaz.jpg";
 
-const Summary = () => {
+const Summary = async () => {
   return (
     <Flex
       flexDirection={{ base: "column", sm: "row" }}
@@ -21,15 +13,12 @@ const Summary = () => {
         <Text>- Front-end Developer(Next.js, Typescript)</Text>
       </Flex>
       <Center>
-        <Image
+        <CustomImageWithBorder
           width={100}
           height={100}
           src={DanialKhakbazProfile}
           alt="Danial Khakbaz's image"
-          style={{
-            border: `2px solid ${useColorModeValue("black", "white")}`,
-            borderRadius: "100%",
-          }}
+          borderWidth="2px"
         />
       </Center>
     </Flex>

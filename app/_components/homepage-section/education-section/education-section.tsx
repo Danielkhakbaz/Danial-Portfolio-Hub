@@ -1,15 +1,8 @@
-"use client";
-
 import { Fragment } from "react";
-import Image, { StaticImageData } from "next/image";
-import {
-  Flex,
-  Divider,
-  Heading,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { StaticImageData } from "next/image";
+import CustomImageWithBorder from "components/custom-image-with-border/custom-image-with-border";
 import AzadUniversityLogo from "assets/logos/azad-university-logo.jpeg";
+import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 
 type EducationHistoryType = {
   logo: StaticImageData;
@@ -19,9 +12,7 @@ type EducationHistoryType = {
   divider?: boolean;
 };
 
-const EducationSection = () => {
-  const borderColor = useColorModeValue("black", "white");
-
+const EducationSection = async () => {
   const educationalHistory: EducationHistoryType[] = [
     {
       logo: AzadUniversityLogo,
@@ -47,17 +38,12 @@ const EducationSection = () => {
             gap={{ base: 2, md: 6 }}
           >
             <Flex>
-              <Image
+              <CustomImageWithBorder
                 width={70}
                 height={60}
                 src={history.logo}
                 alt="Islamic Azad University's image"
-                style={{
-                  width: "70px !important",
-                  height: "60px !important",
-                  border: `2px solid ${borderColor}`,
-                  borderRadius: "100%",
-                }}
+                borderWidth="2px"
               />
             </Flex>
             <Flex width="100%" flexDirection="column" gap={2}>

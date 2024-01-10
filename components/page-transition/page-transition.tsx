@@ -1,12 +1,10 @@
-"use client";
-
 import MotionComponent from "components/motion/motion";
 
 type PageTransitionProps = {
   children: React.ReactNode;
 };
 
-const PageTransition = ({ children }: PageTransitionProps) => {
+const PageTransition = async ({ children }: PageTransitionProps) => {
   return (
     <MotionComponent
       tag="div"

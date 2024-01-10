@@ -1,8 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Flex, Heading, Text, Center } from "@chakra-ui/react";
-import { ImageBorder } from "components/image-border/image-border";
+import {
+  Flex,
+  Heading,
+  Text,
+  Center,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import DanialKhakbazProfile from "assets/images/danial-khakbaz.jpg";
 
 const Summary = () => {
@@ -22,7 +27,7 @@ const Summary = () => {
           src={DanialKhakbazProfile}
           alt="Danial Khakbaz's image"
           style={{
-            border: ImageBorder(),
+            border: `2px solid ${useColorModeValue("black", "white")}`,
             borderRadius: "100%",
           }}
         />

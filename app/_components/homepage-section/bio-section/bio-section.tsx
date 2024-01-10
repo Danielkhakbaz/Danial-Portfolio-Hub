@@ -24,7 +24,7 @@ const BioSection = async () => {
       <SectionCreator
         year={2019}
         content={
-          <Text>Started my professional career as a Front-end Engineer.</Text>
+          <Text>Started my professional career as a Front-end Developer.</Text>
         }
       />
       <SectionCreator

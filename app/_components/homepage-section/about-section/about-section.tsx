@@ -7,13 +7,14 @@ const AboutSection = async () => {
   return (
     <Flex flexDirection="column" gap={4}>
       <Text textAlign="justify" textIndent="1em">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, officiis
-        illum. Voluptate accusantium aperiam repellendus, harum quam excepturi
-        quos, ea nobis dignissimos fuga recusandae impedit laborum sapiente
-        fugiat aut animi! Lorem ipsum dolor sit amet consectetur, adipisicing
-        elit. Quos, officiis illum. Voluptate accusantium aperiam repellendus,
-        harum quam excepturi quos, ea nobis dignissimos fuga recusandae impedit
-        laborum sapiente fugiat aut animi!
+        Danial is a Front-end developer, highly ambitious individual with a
+        passion for continuous learning and a keen interest in embracing new
+        challenges. His expertise lies in crafting seamless web applications
+        using technologies such as Next.js, React.js, JavaScript, and
+        TypeScript.
+        <br />
+        In addition to his professional endeavors, Danial is committed to
+        maintaining a balanced lifestyle.
       </Text>
       <Flex
         flexDirection={{ base: "column", sm: "row" }}

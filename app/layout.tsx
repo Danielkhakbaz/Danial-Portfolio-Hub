@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
 import { ChakraProvider } from "providers/chakra-provider";
@@ -9,7 +9,7 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const LatoFont = Lato({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Danial Khakbaz",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={LatoFont.className}>
         <ChakraProvider>
           <Navbar />
           <Container maxWidth="container.sm" paddingY={6}>

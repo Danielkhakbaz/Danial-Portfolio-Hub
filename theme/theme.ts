@@ -1,3 +1,4 @@
+import { LatoFont } from "theme/font";
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
@@ -8,6 +9,9 @@ export const theme = extendTheme({
         bg: mode("#f0e7db", "#202023"),
       },
     },
+  },
+  fonts: {
+    heading: LatoFont.style.fontFamily,
   },
   breakpoints: {
     base: "0px",

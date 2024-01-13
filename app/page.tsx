@@ -1,3 +1,4 @@
+import PageTransition from "components/page-transition/page-transition";
 import ImagesGrid from "app/_components/images-grid/images-grid";
 import FavQuote from "app/_components/fav-quote/fav-quote";
 import Summary from "app/_components/summary/summary";
@@ -11,26 +12,28 @@ import { Flex } from "@chakra-ui/react";
 
 const HomePage = async () => {
   return (
-    <Flex flexDirection="column" gap={6}>
-      <ImagesGrid />
-      <FavQuote />
-      <Summary />
-      <HomePageSection title="About">
-        <AboutSection />
-      </HomePageSection>
-      <HomePageSection title="Bio">
-        <BioSection />
-      </HomePageSection>
-      <HomePageSection title="Interests">
-        <InterestsSection />
-      </HomePageSection>
-      <HomePageSection title="Links">
-        <LinksSection />
-      </HomePageSection>
-      <HomePageSection title="Education">
-        <EducationSection />
-      </HomePageSection>
-    </Flex>
+    <PageTransition>
+      <Flex flexDirection="column" gap={6}>
+        <ImagesGrid />
+        <FavQuote />
+        <Summary />
+        <HomePageSection title="About">
+          <AboutSection />
+        </HomePageSection>
+        <HomePageSection title="Bio">
+          <BioSection />
+        </HomePageSection>
+        <HomePageSection title="Interests">
+          <InterestsSection />
+        </HomePageSection>
+        <HomePageSection title="Links">
+          <LinksSection />
+        </HomePageSection>
+        <HomePageSection title="Education">
+          <EducationSection />
+        </HomePageSection>
+      </Flex>
+    </PageTransition>
   );
 };
 

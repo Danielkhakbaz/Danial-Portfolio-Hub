@@ -1,6 +1,6 @@
 import PageTransition from "components/page-transition/page-transition";
 
-const ContactMePage = () => {
+const ContactMePage = async () => {
   return <PageTransition>ContactMe</PageTransition>;
 };
 

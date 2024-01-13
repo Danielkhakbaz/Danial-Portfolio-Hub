@@ -1,6 +1,6 @@
 import PageTransition from "components/page-transition/page-transition";
 
-const ExperiencesPage = () => {
+const ExperiencesPage = async () => {
   return <PageTransition>Experiences</PageTransition>;
 };
 

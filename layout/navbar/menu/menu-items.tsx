@@ -26,7 +26,7 @@ type MenuItemsType = {
   link: string;
   label: string;
   icon?: React.ReactElement;
-  mobileIcon?: React.ReactElement;
+  mobileIcon: React.ReactElement;
 };
 
 const menuItems: MenuItemsType[] = [

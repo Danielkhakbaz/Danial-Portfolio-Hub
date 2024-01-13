@@ -1,22 +1,31 @@
 import { Center, Text, Flex } from "@chakra-ui/react";
 
-const FavQuote = async () => {
-  const randomNumberBetween0and2 = Math.floor(Math.random() * 3);
+type QuotesType = {
+  text: string;
+  author: string;
+};
 
-  const Quotes = [
-    {
-      text: "BE LEGENDARY",
-      author: "Kobe Bryant",
-    },
-    {
-      text: "DO WHAT YOU GOTTA DO",
-      author: "Me",
-    },
-    {
-      text: "DO WHAT EXCITES",
-      author: "Kelly Wakasa",
-    },
-  ];
+const Quotes: QuotesType[] = [
+  {
+    text: "BE LEGENDARY",
+    author: "Kobe Bryant",
+  },
+  {
+    text: "DO WHAT YOU GOTTA DO",
+    author: "Me",
+  },
+  {
+    text: "DO WHAT EXCITES",
+    author: "Kelly Wakasa",
+  },
+  {
+    text: "ICE IN MY VEINS",
+    author: "D'Angelo Russell",
+  },
+];
+
+const FavQuote = async () => {
+  const randomNumberBetween0and2 = Math.floor(Math.random() * 4);
 
   return (
     <Center

@@ -1,11 +1,11 @@
 import { Flex, Text, Box } from "@chakra-ui/react";
 
-type SectionProps = {
+type HomePageSectionProps = {
   title: string;
   children: React.ReactNode;
 };
 
-const HomePageSection = async ({ title, children }: SectionProps) => {
+const HomePageSection = async ({ title, children }: HomePageSectionProps) => {
   return (
     <Flex flexDirection="column" gap={2}>
       <Text

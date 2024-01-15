@@ -1,6 +1,7 @@
-import { Flex, Heading, Text, Center } from "@chakra-ui/react";
-import CustomImageWithBorder from "components/custom-image-with-border/custom-image-with-border";
+import Image from "next/image";
+import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import DanialKhakbazProfile from "assets/images/danial-khakbaz.jpg";
+import { Flex, Heading, Text, Center } from "@chakra-ui/react";
 
 const Summary = async () => {
   return (
@@ -13,13 +14,23 @@ const Summary = async () => {
         <Text>- Front-end Developer(Next.js, Typescript)</Text>
       </Flex>
       <Center>
-        <CustomImageWithBorder
-          width={100}
-          height={100}
-          src={DanialKhakbazProfile}
-          alt="Danial Khakbaz's image"
-          borderWidth="2px"
-        />
+        <ColorModeComponent
+          firstColor="black"
+          secondColor="white"
+          mainStyle={{
+            border: "2px solid",
+          }}
+          styles={{
+            borderRadius: "100%",
+          }}
+        >
+          <Image
+            width={100}
+            height={100}
+            src={DanialKhakbazProfile}
+            alt="Danial Khakbaz's image"
+          />
+        </ColorModeComponent>
       </Center>
     </Flex>
   );

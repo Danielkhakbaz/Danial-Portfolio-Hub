@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
 import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
@@ -6,7 +7,7 @@ import { LatoFont } from "theme/font";
 import { Container } from "@chakra-ui/react";
 
 type RootLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export const metadata: Metadata = {

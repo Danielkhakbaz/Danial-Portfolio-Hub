@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+import { FaTelegramPlane } from "react-icons/fa";
 import {
   FaEnvelope,
   FaXTwitter,
@@ -6,12 +8,11 @@ import {
   FaLinkedinIn,
   FaSpotify,
 } from "react-icons/fa6";
-import { FaTelegramPlane } from "react-icons/fa";
 import styles from "app/_components/homepage-section/links-section/links-section.module.css";
 
 type SocialsType = {
   link: string;
-  logo: React.ReactElement;
+  logo: ReactElement;
 };
 
 export const socials: SocialsType[] = [

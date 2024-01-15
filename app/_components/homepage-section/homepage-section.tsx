@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import { Flex, Text, Box } from "@chakra-ui/react";
 
 type HomePageSectionProps = {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const HomePageSection = async ({ title, children }: HomePageSectionProps) => {

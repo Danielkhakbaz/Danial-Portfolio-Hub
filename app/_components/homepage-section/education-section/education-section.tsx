@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { StaticImageData } from "next/image";
-import CustomImageWithBorder from "components/custom-image-with-border/custom-image-with-border";
+import Image, { StaticImageData } from "next/image";
+import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import AzadUniversityLogo from "assets/logos/azad-university-logo.jpeg";
 import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 
@@ -38,13 +38,23 @@ const EducationSection = async () => {
             gap={{ base: 2, md: 6 }}
           >
             <Flex>
-              <CustomImageWithBorder
-                width={70}
-                height={60}
-                src={history.logo}
-                alt="Islamic Azad University's image"
-                borderWidth="2px"
-              />
+              <ColorModeComponent
+                firstColor="black"
+                secondColor="white"
+                mainStyle={{
+                  border: "2px solid",
+                }}
+                styles={{
+                  borderRadius: "100%",
+                }}
+              >
+                <Image
+                  width={70}
+                  height={60}
+                  src={history.logo}
+                  alt="Islamic Azad University's image"
+                />
+              </ColorModeComponent>
             </Flex>
             <Flex width="100%" flexDirection="column" gap={2}>
               <Heading

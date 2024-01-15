@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { ReactElement } from "react";
+import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import MotionComponent from "components/motion/motion";
 import {
+  Link,
   Flex,
   Menu,
   MenuButton,
@@ -23,38 +25,38 @@ import {
 } from "react-icons/fa";
 
 type MenuItemsType = {
-  link: string;
+  href: string;
   label: string;
-  icon?: React.ReactElement;
-  mobileIcon: React.ReactElement;
+  mobileIcon: ReactElement;
+  icon?: ReactElement;
 };
 
 const menuItems: MenuItemsType[] = [
   {
-    link: "/",
+    href: "/",
     label: "Home",
     mobileIcon: <FaHome style={{ fontSize: "15px" }} />,
   },
   {
-    link: "/projects",
+    href: "/projects",
     label: "Projects",
     mobileIcon: <FaLayerGroup style={{ fontSize: "15px" }} />,
   },
   {
-    link: "/experiences",
+    href: "/experiences",
     label: "Experiences",
     mobileIcon: <FaMoneyBillWave style={{ fontSize: "15px" }} />,
   },
   {
-    link: "/blog",
+    href: "/blog",
     label: "Blog",
     mobileIcon: <FaCode style={{ fontSize: "15px" }} />,
   },
   {
-    link: "/contact-me",
+    href: "/contact-me",
     label: "Talk",
-    icon: <FaQuestion />,
     mobileIcon: <FaComments style={{ fontSize: "15px" }} />,
+    icon: <FaQuestion />,
   },
 ];
 
@@ -63,17 +65,17 @@ export const WebMenuItems = () => {
 
   return (
     <>
-      {menuItems.map(({ link, label, icon }) => {
-        const isActive = path === link;
+      {menuItems.map(({ href, label, icon }) => {
+        const isActive = path === href;
 
         return (
           <Link
+            as={NextLink}
             key={label}
-            href={link}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-            }}
+            href={href}
+            display="flex"
+            flexDirection="column"
+            _hover={{ textDecoration: "none" }}
           >
             <Flex
               alignItems="center"
@@ -117,14 +119,14 @@ export const MobileMenuItems = () => {
         variant="outline"
       />
       <MenuList>
-        {menuItems.map(({ link, label, mobileIcon }) => {
-          const isActive = path === link;
+        {menuItems.map(({ href, label, mobileIcon }) => {
+          const isActive = path === href;
 
           return (
             <MenuItem
               key={label}
-              as={Link}
-              href={link}
+              as={NextLink}
+              href={href}
               icon={mobileIcon}
               color={
                 isActive ? useColorModeValue("purple", "orange") : undefined

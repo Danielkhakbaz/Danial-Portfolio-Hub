@@ -1,11 +1,12 @@
 "use client";
 
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 type MotionComponentProps = {
   tag: string;
   className?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   [key: string]: unknown;
 };
 

@@ -1,7 +1,8 @@
+import { ReactNode } from "react";
 import MotionComponent from "components/motion/motion";
 
 type PageTransitionProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const PageTransition = async ({ children }: PageTransitionProps) => {

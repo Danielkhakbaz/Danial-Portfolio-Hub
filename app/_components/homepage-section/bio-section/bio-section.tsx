@@ -1,8 +1,9 @@
+import { ReactElement } from "react";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type SectionCreatorProps = {
   year: number | string;
-  content: React.ReactElement;
+  content: ReactElement;
 };
 
 const SectionCreator = async ({ year, content }: SectionCreatorProps) => {

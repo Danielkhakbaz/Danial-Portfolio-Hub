@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Flex } from "@chakra-ui/react";
-import { socials } from "app/_components/homepage-section/links-section/socials";
+import { socials } from "app/_components/homepage-section/links-section/_constants/socials";
 
 const LinksSection = async () => {
   return (

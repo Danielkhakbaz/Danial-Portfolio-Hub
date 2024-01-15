@@ -1,7 +1,7 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import ThemeController from "components/theme-controller/theme-controller";
 import { WebMenuItems, MobileMenuItems } from "./menu/menu-items";
-import { Container, Flex, Text, Heading } from "@chakra-ui/react";
+import { Container, Flex, Link, Text, Heading } from "@chakra-ui/react";
 
 const Navbar = async () => {
   return (
@@ -13,7 +13,15 @@ const Navbar = async () => {
       padding={2}
     >
       <Flex width="25%" justifyContent="flex-start" alignItems="center">
-        <Link href="/">
+        <Link
+          as={NextLink}
+          href="/"
+          width="fit-content"
+          borderRadius={4}
+          paddingX={2}
+          paddingY={0.5}
+          _hover={{ backgroundColor: "ButtonFace" }}
+        >
           <Text>Logo</Text>
           <Heading size="sm">Danial Khakbaz</Heading>
         </Link>

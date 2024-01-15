@@ -12,7 +12,7 @@ const Quotes: QuotesType[] = [
   },
   {
     text: "DO WHAT YOU GOTTA DO",
-    author: "Me",
+    author: "Danial Khakbaz",
   },
   {
     text: "DO WHAT EXCITES",

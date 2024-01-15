@@ -79,7 +79,7 @@ const ProjectsID = ({ params }: ProjectsIDProps) => {
                 gap: 4,
               }}
             >
-              This Project's Github <FaRightFromBracket />
+              This Project&apos;s Github <FaRightFromBracket />
             </ChakraLink>
           </Flex>
           <Flex alignItems="baseline" gap={4}>

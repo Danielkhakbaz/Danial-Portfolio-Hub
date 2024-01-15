@@ -3,7 +3,8 @@
 import { AnimatePresence } from "framer-motion";
 import MotionComponent from "components/motion/motion";
 import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
-import { FaRegMoon, FaRegSun } from "react-icons/fa";
+import { FaRegMoon } from "react-icons/fa";
+import { MdOutlineWbSunny } from "react-icons/md";
 
 const ThemeController = () => {
   const { toggleColorMode } = useColorMode();
@@ -22,7 +23,7 @@ const ThemeController = () => {
         <IconButton
           aria-label="Toggle theme"
           colorScheme={useColorModeValue("purple", "orange")}
-          icon={useColorModeValue(<FaRegMoon />, <FaRegSun />)}
+          icon={useColorModeValue(<FaRegMoon />, <MdOutlineWbSunny />)}
           onClick={toggleColorMode}
         />
       </MotionComponent>

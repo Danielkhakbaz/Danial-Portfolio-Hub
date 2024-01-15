@@ -9,8 +9,23 @@ const AboutSection = async () => {
         Danial is a Front-end developer, highly ambitious individual with a
         passion for continuous learning and a keen interest in embracing new
         challenges. His expertise lies in crafting seamless web applications
-        using technologies such as Next.js, React.js, JavaScript, and
-        TypeScript.
+        using technologies such as{" "}
+        <Text as="b" textDecoration="underline">
+          Next.js
+        </Text>
+        ,{" "}
+        <Text as="b" textDecoration="underline">
+          React.js
+        </Text>
+        ,{" "}
+        <Text as="b" textDecoration="underline">
+          JavaScript
+        </Text>{" "}
+        and{" "}
+        <Text as="b" textDecoration="underline">
+          TypeScript
+        </Text>
+        .
         <br />
         In addition to his professional endeavors, Danial is committed to
         maintaining a balanced lifestyle.

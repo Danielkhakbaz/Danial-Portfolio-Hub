@@ -6,7 +6,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: mode("#f0e7db", "#202023"),
+        bg: mode("#F0E7DB", "#202023"),
       },
     },
   },

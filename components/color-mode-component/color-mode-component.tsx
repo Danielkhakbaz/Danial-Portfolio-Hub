@@ -1,15 +1,8 @@
 "use client";
 
 import { ReactElement, Children, cloneElement } from "react";
+import { ModeComponentType } from "components/color-mode-component/mode-component-type";
 import { useColorModeValue } from "@chakra-ui/react";
-
-type ColorModeComponentProps = {
-  firstColor: string;
-  secondColor: string;
-  mainStyle: { [key: string]: string };
-  styles?: { [key: string]: string };
-  children: ReactElement | ReactElement[];
-};
 
 const ColorModeComponent = ({
   firstColor,
@@ -17,7 +10,7 @@ const ColorModeComponent = ({
   mainStyle,
   styles,
   children,
-}: ColorModeComponentProps) => {
+}: ModeComponentType) => {
   const property = Object.keys(mainStyle)[0];
   const propertyValue = mainStyle[property];
 
@@ -26,7 +19,7 @@ const ColorModeComponent = ({
       firstColor,
       secondColor
     )}`,
-    ...(styles || {}),
+    ...styles,
   };
 
   return Children.map(children, (child: ReactElement) => {

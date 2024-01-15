@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import { Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import HoverModeComponent from "../../../../components/color-mode-component/hover-mode-component";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type CardProps = {
   link: string;
@@ -15,36 +16,43 @@ type CardProps = {
 const Card = ({ link, imageSrc, alt, title, description }: CardProps) => {
   return (
     <Link href={`/projects/${link}`}>
-      <Flex
-        flexDirection="column"
-        gap={2}
-        borderRadius="0.4rem"
-        transition="background-color 0.25s ease-out"
-        padding={4}
-        _hover={{ backgroundColor: useColorModeValue("#e5e5e5", "#202020") }}
+      <HoverModeComponent
+        firstColor="#E5E5E5"
+        secondColor="#202020"
+        mainStyle={{
+          backgroundColor: "transparent",
+        }}
       >
-        <Image
-          width="1000"
-          height="150"
-          src={imageSrc}
-          alt={alt}
-          style={{
-            borderRadius: "0.4rem",
-          }}
-        />
-        <Heading
-          fontSize="1.4rem"
-          display="inline-flex"
-          justifyContent="space-between"
-          alignItems="center"
-          gap={4}
+        <Flex
+          flexDirection="column"
+          gap={2}
+          borderRadius="0.4rem"
+          transition="background-color 0.25s ease-out"
+          padding={4}
         >
-          {title}
-        </Heading>
-        <Text fontSize={15} textAlign="justify">
-          {description}
-        </Text>
-      </Flex>
+          <Image
+            width="1000"
+            height="150"
+            src={imageSrc}
+            alt={alt}
+            style={{
+              borderRadius: "0.4rem",
+            }}
+          />
+          <Heading
+            fontSize="1.4rem"
+            display="inline-flex"
+            justifyContent="space-between"
+            alignItems="center"
+            gap={4}
+          >
+            {title}
+          </Heading>
+          <Text fontSize={15} textAlign="justify">
+            {description}
+          </Text>
+        </Flex>
+      </HoverModeComponent>
     </Link>
   );
 };

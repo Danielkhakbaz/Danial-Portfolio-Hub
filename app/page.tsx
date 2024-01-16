@@ -1,13 +1,12 @@
 import PageTransition from "components/page-transition/page-transition";
-import ImagesGrid from "app/_components/images-grid/images-grid";
-import FavQuote from "app/_components/fav-quote/fav-quote";
-import Summary from "app/_components/summary/summary";
-import HomePageSection from "app/_components/homepage-section/homepage-section";
-import AboutSection from "app/_components/homepage-section/about-section/about-section";
-import BioSection from "app/_components/homepage-section/bio-section/bio-section";
-import InterestsSection from "app/_components/homepage-section/interests-section/interests-section";
-import LinksSection from "app/_components/homepage-section/links-section/links-section";
-import EducationSection from "app/_components/homepage-section/education-section/education-section";
+import ImagesGrid from "app/@components/images-grid/images-grid";
+import FavQuote from "app/@components/fav-quote/fav-quote";
+import Summary from "app/@components/summary/summary";
+import About from "app/@components/about/about";
+import Bio from "app/@components/bio/bio";
+import Interests from "app/@components/interests/interests";
+import Links from "app/@components/links/links";
+import Education from "app/@components/education/education";
 import { Flex } from "@chakra-ui/react";
 
 const HomePage = async () => {
@@ -17,21 +16,11 @@ const HomePage = async () => {
         <ImagesGrid />
         <FavQuote />
         <Summary />
-        <HomePageSection title="About">
-          <AboutSection />
-        </HomePageSection>
-        <HomePageSection title="Bio">
-          <BioSection />
-        </HomePageSection>
-        <HomePageSection title="Interests">
-          <InterestsSection />
-        </HomePageSection>
-        <HomePageSection title="Links">
-          <LinksSection />
-        </HomePageSection>
-        <HomePageSection title="Education">
-          <EducationSection />
-        </HomePageSection>
+        <About />
+        <Bio />
+        <Interests />
+        <Links />
+        <Education />
       </Flex>
     </PageTransition>
   );

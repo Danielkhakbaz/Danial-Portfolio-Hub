@@ -1,19 +1,12 @@
-import { ReactElement } from "react";
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageTransition from "components/page-transition/page-transition";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import CustomBadge from "components/custom-badge/custom-badge";
-import { projects } from "app/projects/_constants/projects";
-import {
-  Flex,
-  Button,
-  Heading,
-  Text,
-  Link as ChakraLink,
-  Divider,
-} from "@chakra-ui/react";
-import { FaArrowLeft, FaRightFromBracket } from "react-icons/fa6";
+import { projects } from "app/projects/@constant/projects";
+import { Flex, Button, Heading, Text, Divider } from "@chakra-ui/react";
+import { FaArrowLeft } from "react-icons/fa6";
 
 type ProjectsIDProps = {
   params: {
@@ -57,103 +50,42 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
           <Text>{project.description}</Text>
         </Flex>
         <Flex flexDirection="column" gap={2.5}>
-          <Flex alignItems="baseline" gap={4}>
-            <CustomBadge
-              variant="outline"
-              firstColor="purple"
-              secondColor="orange"
-              fontSize="14px"
-            >
-              Website
-            </CustomBadge>
-            <ColorModeComponent
-              firstColor="purple"
-              secondColor="orange"
-              mainStyle={{
-                color: "",
-              }}
-              styles={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 4,
-              }}
-            >
-              <ChakraLink isExternal href="https://danial.com" target="_blank">
-                https://danial.com
-              </ChakraLink>
-            </ColorModeComponent>
-          </Flex>
-          <Divider />
-          <Flex alignItems="baseline" gap={4}>
-            <CustomBadge
-              variant="outline"
-              firstColor="purple"
-              secondColor="orange"
-              fontSize="14px"
-            >
-              Github
-            </CustomBadge>
-            <ColorModeComponent
-              firstColor="purple"
-              secondColor="orange"
-              mainStyle={{
-                color: "",
-              }}
-              styles={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 4,
-              }}
-            >
-              <ChakraLink isExternal href="https://danial.com">
-                https://github.com/notes-app <FaRightFromBracket />
-              </ChakraLink>
-            </ColorModeComponent>
-          </Flex>
-          <Divider />
-          <Flex alignItems="baseline" flexWrap="wrap" gap={4}>
-            <CustomBadge
-              variant="outline"
-              firstColor="purple"
-              secondColor="orange"
-              fontSize="14px"
-            >
-              Stacks
-            </CustomBadge>
-            {project.stacks.map(
-              ({
-                icon,
-                label,
-                colorScheme,
-              }: {
-                icon: ReactElement;
-                label: string;
-                colorScheme: string;
-              }) => (
+          {project.sections.map((section) => (
+            <Fragment key={section.label}>
+              <Flex alignItems="baseline" gap={4}>
                 <CustomBadge
-                  key={label}
-                  variant="subtle"
-                  firstColor={colorScheme}
-                  secondColor={colorScheme}
-                  fontSize="12px"
+                  variant="outline"
+                  firstColor="purple"
+                  secondColor="orange"
+                  styles={{
+                    fontSize: "14px",
+                    textTransform: "none",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 2,
+                  }}
                 >
-                  {icon}
-                  {label}
+                  {section.label}
                 </CustomBadge>
-              )
-            )}
-          </Flex>
+                {section.component}
+              </Flex>
+              {section.divider && <Divider />}
+            </Fragment>
+          ))}
         </Flex>
-        <Flex>
-          <Image
-            width={1200}
-            height={400}
-            src={project.imageSrc}
-            alt={project.alt}
-            style={{
-              borderRadius: "0.4rem",
-            }}
-          />
+        <Flex flexDirection="column" gap={6}>
+          {project.images.map((image) => (
+            <Image
+              key={image.alt}
+              width={1200}
+              height={400}
+              src={image.src}
+              alt={image.alt}
+              style={{
+                borderRadius: "0.4rem",
+              }}
+            />
+          ))}
         </Flex>
       </Flex>
     </PageTransition>

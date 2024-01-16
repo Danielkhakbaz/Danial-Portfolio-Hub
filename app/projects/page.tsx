@@ -1,6 +1,6 @@
 import PageTransition from "components/page-transition/page-transition";
-import Card from "app/projects/_components/card/card";
-import { projects } from "app/projects/_constants/projects";
+import Card from "app/projects/@components/card/card";
+import { projects } from "app/projects/@constant/projects";
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
 
 const ProjectsPage = async () => {
@@ -16,8 +16,8 @@ const ProjectsPage = async () => {
             <GridItem key={project.link}>
               <Card
                 link={project.link}
-                imageSrc={project.imageSrc}
-                alt={project.alt}
+                imageSrc={project.images[0].src}
+                alt={project.images[0].alt}
                 title={project.title}
                 description={project.description}
               />

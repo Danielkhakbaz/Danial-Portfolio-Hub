@@ -1,32 +1,28 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, CSSProperties } from "react";
 import { Badge, useColorModeValue } from "@chakra-ui/react";
 
 type CustomBadgeProps = {
   firstColor: string;
   secondColor: string;
-  variant: string;
-  fontSize: string;
+  variant?: string;
+  styles: CSSProperties;
   children: ReactNode;
 };
 
 const CustomBadge = ({
   firstColor,
   secondColor,
-  variant,
-  fontSize,
+  variant = "subtle",
+  styles,
   children,
 }: CustomBadgeProps) => {
   return (
     <Badge
       variant={variant}
       colorScheme={useColorModeValue(firstColor, secondColor)}
-      fontSize={fontSize}
-      textTransform="none"
-      display="inline-flex"
-      alignItems="center"
-      gap={2}
+      style={{ ...styles }}
     >
       {children}
     </Badge>

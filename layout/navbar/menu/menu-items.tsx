@@ -1,9 +1,9 @@
 "use client";
 
-import { ReactElement } from "react";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import MotionComponent from "components/motion/motion";
+import { menuItems } from "layout/navbar/menu/_constant/menu-items";
 import {
   Link,
   Flex,
@@ -14,51 +14,7 @@ import {
   IconButton,
   useColorModeValue,
 } from "@chakra-ui/react";
-import {
-  FaHome,
-  FaLayerGroup,
-  FaMoneyBillWave,
-  FaCode,
-  FaQuestion,
-  FaComments,
-  FaBars,
-} from "react-icons/fa";
-
-type MenuItemsType = {
-  href: string;
-  label: string;
-  mobileIcon: ReactElement;
-  icon?: ReactElement;
-};
-
-const menuItems: MenuItemsType[] = [
-  {
-    href: "/",
-    label: "Home",
-    mobileIcon: <FaHome style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/projects",
-    label: "Projects",
-    mobileIcon: <FaLayerGroup style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/experiences",
-    label: "Experiences",
-    mobileIcon: <FaMoneyBillWave style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/blog",
-    label: "Blog",
-    mobileIcon: <FaCode style={{ fontSize: "15px" }} />,
-  },
-  {
-    href: "/contact-me",
-    label: "Talk",
-    mobileIcon: <FaComments style={{ fontSize: "15px" }} />,
-    icon: <FaQuestion />,
-  },
-];
+import { FaBars } from "react-icons/fa";
 
 export const WebMenuItems = () => {
   const path = usePathname();
@@ -66,7 +22,7 @@ export const WebMenuItems = () => {
   return (
     <>
       {menuItems.map(({ href, label, icon }) => {
-        const isActive = path === href;
+        const isActive = path === href || path.startsWith(`${href}/`);
 
         return (
           <Link
@@ -120,8 +76,7 @@ export const MobileMenuItems = () => {
       />
       <MenuList>
         {menuItems.map(({ href, label, mobileIcon }) => {
-          const isActive =
-            path === href || (path.startsWith(href) && path !== "/");
+          const isActive = path === href || path.startsWith(`${href}/`);
 
           return (
             <MenuItem

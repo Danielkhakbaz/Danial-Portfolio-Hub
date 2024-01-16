@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
   FaSpotify,
 } from "react-icons/fa6";
-import styles from "app/_components/homepage-section/links-section/links-section.module.css";
+import styles from "app/@components/links/links.module.css";
 
 type SocialsType = {
   link: string;
@@ -20,7 +20,7 @@ export const socials: SocialsType[] = [
     link: "mailto:danialkhakbaz.dk@gmail.com",
     logo: (
       <FaEnvelope
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#D3D3D3",
         }}
@@ -31,7 +31,7 @@ export const socials: SocialsType[] = [
     link: "https://t.me/danielkhakbaz",
     logo: (
       <FaTelegramPlane
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#0088CC",
         }}
@@ -42,7 +42,7 @@ export const socials: SocialsType[] = [
     link: "https://twitter.com/danielkhakbaz",
     logo: (
       <FaXTwitter
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#1DA1F2",
         }}
@@ -53,7 +53,7 @@ export const socials: SocialsType[] = [
     link: "https://www.instagram.com/danielkhakbaz/",
     logo: (
       <FaInstagram
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#DD2A7B",
         }}
@@ -64,7 +64,7 @@ export const socials: SocialsType[] = [
     link: "https://github.com/danielkhakbaz",
     logo: (
       <FaGithub
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#818288",
         }}
@@ -75,7 +75,7 @@ export const socials: SocialsType[] = [
     link: "https://www.linkedin.com/in/danielkhakbaz/",
     logo: (
       <FaLinkedinIn
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#0077B5",
         }}
@@ -86,7 +86,7 @@ export const socials: SocialsType[] = [
     link: "https://open.spotify.com/user/3p0q2i0j7g4e0vo9hc0kkpmov?si=22691cd459ad4736&nd=1",
     logo: (
       <FaSpotify
-        className={styles.links__section__item}
+        className={styles.links__item}
         style={{
           color: "#1ED760",
         }}

@@ -1,8 +1,6 @@
-"use client";
-
 import { ReactElement } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import PageTransition from "components/page-transition/page-transition";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import CustomBadge from "components/custom-badge/custom-badge";
@@ -23,11 +21,17 @@ type ProjectsIDProps = {
   };
 };
 
-const ProjectsID = ({ params }: ProjectsIDProps) => {
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.link,
+  }));
+}
+
+const ProjectsID = async ({ params }: ProjectsIDProps) => {
   const project = projects.find((project) => project.link === params.id);
 
   if (!project) {
-    throw Error();
+    throw new Error("The Project is not found!");
   }
 
   return (

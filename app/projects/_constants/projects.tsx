@@ -28,7 +28,7 @@ export const projects: ProjectsType[] = [
     link: "notes-app1",
     imageSrc: SampleImage,
     alt: "",
-    title: "Notes App",
+    title: "Notes App 1",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
     stacks: [
@@ -68,7 +68,7 @@ export const projects: ProjectsType[] = [
     link: "notes-app2",
     imageSrc: SampleImage,
     alt: "",
-    title: "Notes App",
+    title: "Notes App 2",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
     stacks: [
@@ -83,7 +83,7 @@ export const projects: ProjectsType[] = [
     link: "notes-app3",
     imageSrc: SampleImage,
     alt: "",
-    title: "Notes App",
+    title: "Notes App 3",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
     stacks: [
@@ -98,7 +98,7 @@ export const projects: ProjectsType[] = [
     link: "notes-ap4",
     imageSrc: SampleImage,
     alt: "",
-    title: "Notes App",
+    title: "Notes App 4",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
     stacks: [
@@ -113,7 +113,7 @@ export const projects: ProjectsType[] = [
     link: "notes-app5",
     imageSrc: SampleImage,
     alt: "",
-    title: "Notes App",
+    title: "Notes App 5",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
     stacks: [

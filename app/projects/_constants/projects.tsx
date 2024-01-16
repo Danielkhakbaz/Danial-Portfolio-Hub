@@ -1,5 +1,14 @@
+import { ReactElement } from "react";
 import { StaticImageData } from "next/image";
 import SampleImage from "assets/images/Sketch.jpg";
+import { FaReact } from "react-icons/fa6";
+import {
+  SiNextdotjs,
+  SiChakraui,
+  SiTailwindcss,
+  SiTypescript,
+  SiJavascript,
+} from "react-icons/si";
 
 type ProjectsType = {
   link: string;
@@ -7,6 +16,11 @@ type ProjectsType = {
   alt: string;
   title: string;
   description: string;
+  stacks: {
+    icon: ReactElement;
+    label: string;
+    colorScheme: string;
+  }[];
 };
 
 export const projects: ProjectsType[] = [
@@ -17,6 +31,38 @@ export const projects: ProjectsType[] = [
     title: "Notes App",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    stacks: [
+      {
+        icon: <FaReact />,
+        label: "React.js",
+        colorScheme: "cyan",
+      },
+      {
+        icon: <SiNextdotjs />,
+        label: "Next.js",
+        colorScheme: "gray",
+      },
+      {
+        icon: <SiChakraui />,
+        label: "ChakraUI",
+        colorScheme: "teal",
+      },
+      {
+        icon: <SiTailwindcss />,
+        label: "TailwindCSS",
+        colorScheme: "blue",
+      },
+      {
+        icon: <SiTypescript />,
+        label: "Typescript",
+        colorScheme: "blue",
+      },
+      {
+        icon: <SiJavascript />,
+        label: "Javascript",
+        colorScheme: "yellow",
+      },
+    ],
   },
   {
     link: "notes-app2",
@@ -25,6 +71,13 @@ export const projects: ProjectsType[] = [
     title: "Notes App",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    stacks: [
+      {
+        icon: <FaReact />,
+        label: "React.js",
+        colorScheme: "cyan",
+      },
+    ],
   },
   {
     link: "notes-app3",
@@ -33,6 +86,13 @@ export const projects: ProjectsType[] = [
     title: "Notes App",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    stacks: [
+      {
+        icon: <FaReact />,
+        label: "React.js",
+        colorScheme: "cyan",
+      },
+    ],
   },
   {
     link: "notes-ap4",
@@ -41,6 +101,13 @@ export const projects: ProjectsType[] = [
     title: "Notes App",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    stacks: [
+      {
+        icon: <FaReact />,
+        label: "React.js",
+        colorScheme: "cyan",
+      },
+    ],
   },
   {
     link: "notes-app5",
@@ -49,5 +116,12 @@ export const projects: ProjectsType[] = [
     title: "Notes App",
     description:
       "a lot of description a lot of description a lot of description a lot of description a lot of description",
+    stacks: [
+      {
+        icon: <FaReact />,
+        label: "React.js",
+        colorScheme: "cyan",
+      },
+    ],
   },
 ];

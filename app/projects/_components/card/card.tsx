@@ -1,8 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import HoverModeComponent from "../../../../components/color-mode-component/hover-mode-component";
+import HoverModeComponent from "components/color-mode-component/hover-mode-component";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type CardProps = {
@@ -13,7 +11,7 @@ type CardProps = {
   description: string;
 };
 
-const Card = ({ link, imageSrc, alt, title, description }: CardProps) => {
+const Card = async ({ link, imageSrc, alt, title, description }: CardProps) => {
   return (
     <Link href={`/projects/${link}`}>
       <HoverModeComponent

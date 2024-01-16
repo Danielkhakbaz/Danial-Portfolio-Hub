@@ -120,7 +120,8 @@ export const MobileMenuItems = () => {
       />
       <MenuList>
         {menuItems.map(({ href, label, mobileIcon }) => {
-          const isActive = path === href;
+          const isActive =
+            path === href || (path.startsWith(href) && path !== "/");
 
           return (
             <MenuItem

@@ -38,8 +38,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -60,8 +60,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -125,8 +125,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -147,8 +147,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -212,8 +212,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -234,8 +234,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -299,8 +299,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -321,8 +321,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -386,8 +386,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",
@@ -408,8 +408,8 @@ export const projects: ProjectsType[] = [
           <ColorModeComponent
             firstColor="purple"
             secondColor="orange"
-            mainStyle={{
-              color: "",
+            mainStyles={{
+              color: null,
             }}
             styles={{
               display: "inline-flex",

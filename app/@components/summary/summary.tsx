@@ -17,7 +17,7 @@ const Summary = async () => {
         <ColorModeComponent
           firstColor="black"
           secondColor="white"
-          mainStyle={{
+          mainStyles={{
             border: "2px solid",
           }}
           styles={{

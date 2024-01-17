@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
-import HoverModeComponent from "components/color-mode-component/hover-mode-component";
+import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type CardProps = {
@@ -14,10 +14,11 @@ type CardProps = {
 const Card = async ({ link, imageSrc, alt, title, description }: CardProps) => {
   return (
     <Link href={`/projects/${link}`}>
-      <HoverModeComponent
+      <ColorModeComponent
         firstColor="#E5E5E5"
         secondColor="#202020"
-        mainStyle={{
+        isHover
+        mainStyles={{
           backgroundColor: "transparent",
         }}
       >
@@ -50,7 +51,7 @@ const Card = async ({ link, imageSrc, alt, title, description }: CardProps) => {
             {description}
           </Text>
         </Flex>
-      </HoverModeComponent>
+      </ColorModeComponent>
     </Link>
   );
 };

@@ -35,8 +35,8 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
             <ColorModeComponent
               firstColor="black"
               secondColor="white"
-              mainStyle={{
-                borderColor: "",
+              mainStyles={{
+                borderColor: null,
               }}
             >
               <Button variant="outline">

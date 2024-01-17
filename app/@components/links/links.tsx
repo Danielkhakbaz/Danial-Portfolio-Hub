@@ -1,28 +1,19 @@
 import NextLink from "next/link";
-import { Flex, Text, Box, Link } from "@chakra-ui/react";
+import HomePageSectionMaker from "app/@components/@utils/homepage-section-maker/homepage-section-maker";
 import { socials } from "app/@components/links/_constant/socials";
+import { Flex, Link } from "@chakra-ui/react";
 
 const Links = async () => {
   return (
-    <Flex flexDirection="column" gap={2}>
-      <Text
-        width="fit-content"
-        fontWeight="bolder"
-        fontSize="lg"
-        borderBottom="4px solid gray"
-      >
-        Links
-      </Text>
-      <Box marginY={2}>
-        <Flex flexWrap="wrap" justifyContent="space-between" gap={4}>
-          {socials.map((social) => (
-            <Link as={NextLink} key={social.link} href={social.link} isExternal>
-              {social.logo}
-            </Link>
-          ))}
-        </Flex>
-      </Box>
-    </Flex>
+    <HomePageSectionMaker label="Links">
+      <Flex justifyContent="space-between" flexWrap="wrap" gap={4}>
+        {socials.map((social) => (
+          <Link as={NextLink} key={social.link} href={social.link} isExternal>
+            {social.logo}
+          </Link>
+        ))}
+      </Flex>
+    </HomePageSectionMaker>
   );
 };
 

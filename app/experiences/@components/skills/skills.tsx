@@ -14,7 +14,12 @@ import { Flex } from "@chakra-ui/react";
 
 const Skills = async () => {
   return (
-    <Flex width="100%" justifyContent="space-between" gap={8}>
+    <Flex
+      width="100%"
+      flexWrap={{ base: "wrap", md: "nowrap" }}
+      justifyContent={{ base: "flex-start", md: "space-between" }}
+      gap={8}
+    >
       <SiReact
         style={{
           width: "40px",

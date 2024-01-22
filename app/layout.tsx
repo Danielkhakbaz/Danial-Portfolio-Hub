@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
-import { ChakraProvider } from "providers/chakra-provider";
+import { SessionProviderFromNextAuth } from "providers/session/session";
+import { ChakraProvider } from "providers/chakra/chakra";
 import { LatoFont } from "theme/font";
 import { Container } from "@chakra-ui/react";
 
@@ -19,13 +20,15 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body className={LatoFont.className}>
-        <ChakraProvider>
-          <Navbar />
-          <Container maxWidth="container.sm" paddingY={6}>
-            {children}
-          </Container>
-          <Footer />
-        </ChakraProvider>
+        <SessionProviderFromNextAuth>
+          <ChakraProvider>
+            <Navbar />
+            <Container maxWidth="container.sm" paddingY={6}>
+              {children}
+            </Container>
+            <Footer />
+          </ChakraProvider>
+        </SessionProviderFromNextAuth>
       </body>
     </html>
   );

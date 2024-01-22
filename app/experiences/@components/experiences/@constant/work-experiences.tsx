@@ -1,10 +1,10 @@
 import ISCLogo from "assets/logos/isc-logo.jpeg";
 import HadishLogo from "assets/logos/hadish-logo.jpeg";
-import CrossLogo from "assets/logos/cross-logo.jpeg";
+import CrossLogo from "assets/logos/cross-logo.png";
 
-export const experiences = [
+export const workExperiences = [
   {
-    logo: ISCLogo,
+    logo: { src: ISCLogo, alt: "Informatics Services Corporation(ISC)'s logo" },
     position: "Front-end Developer",
     company_name: "Informatics Services Corporation",
     info: "Currently employed as a Front-end Developer at ISC Company, specifically working within the BankID Team. BankID is the first e-KYC service provider in Iran which uses powerful AI algorithms including live face detection and vertification to authenticate the users' ID, with more than 50,000 daily users and 6,000,000 successfull authentications.",
@@ -34,7 +34,7 @@ export const experiences = [
     divider: true,
   },
   {
-    logo: HadishLogo,
+    logo: { src: HadishLogo, alt: "Hadish Sabz Parseh's logo" },
     position: "Front-end Developer",
     company_name: "Hadish Sabz Parseh",
     info: "Hadish Sabz Parseh is one of the largest Smart TV manufacturers in Iran.",
@@ -65,7 +65,7 @@ export const experiences = [
     divider: true,
   },
   {
-    logo: CrossLogo,
+    logo: { src: CrossLogo, alt: "Cross sport's logo" },
     position: "Front-end Developer",
     company_name: "Cross Sport",
     info: "Cross Sport is one of the largest online store and manufacturer of sports equipment throughout the country.",

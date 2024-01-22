@@ -5,15 +5,18 @@ import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 
 type ExperiencesProps = {
   experience: {
-    logo: StaticImageData;
+    logo: {
+      src: StaticImageData;
+      alt: string;
+    };
     position: string;
     company_name: string;
+    location: string;
+    timeline: string;
     info: string;
     descriptions: {
       paragraph: string;
     }[];
-    timeline: string;
-    location: string;
     divider?: boolean;
   };
 };
@@ -39,8 +42,8 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
             <Image
               width={70}
               height={70}
-              src={experience.logo}
-              alt="Islamic Azad University's image"
+              src={experience.logo.src}
+              alt={experience.logo.alt}
             />
           </ColorModeComponent>
         </Flex>

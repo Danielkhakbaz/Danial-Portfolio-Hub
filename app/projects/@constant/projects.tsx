@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import { stacks } from "app/projects/@constant/stacks";
 import SampleImage from "assets/images/Sketch.jpg";
-import { Link as ChakraLink, Flex, Badge } from "@chakra-ui/react";
+import { Link, Flex, Badge } from "@chakra-ui/react";
 import { FaRightFromBracket } from "react-icons/fa6";
 
 type ProjectsType = {
@@ -47,9 +47,9 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -69,10 +69,10 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
               <FaRightFromBracket />
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -134,9 +134,9 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -156,10 +156,10 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
               <FaRightFromBracket />
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -221,9 +221,9 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -243,10 +243,10 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
               <FaRightFromBracket />
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -308,9 +308,9 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -330,10 +330,10 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
               <FaRightFromBracket />
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -395,9 +395,9 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,
@@ -417,10 +417,10 @@ export const projects: ProjectsType[] = [
               gap: 4,
             }}
           >
-            <ChakraLink isExternal href="https://href.com" target="_blank">
+            <Link isExternal href="https://href.com" target="_blank">
               https://lable.com
               <FaRightFromBracket />
-            </ChakraLink>
+            </Link>
           </ColorModeComponent>
         ),
         divider: true,

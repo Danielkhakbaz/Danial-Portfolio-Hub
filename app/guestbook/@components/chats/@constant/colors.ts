@@ -1,4 +1,6 @@
-export const colors = [
+type ColorsType = string[];
+
+export const colors: ColorsType = [
   "aqua",
   "beige",
   "bisque",

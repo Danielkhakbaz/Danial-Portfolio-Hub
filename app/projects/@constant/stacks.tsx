@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { FaReact } from "react-icons/fa6";
 import {
   SiNextdotjs,
@@ -7,7 +8,16 @@ import {
   SiJavascript,
 } from "react-icons/si";
 
-export const stacks = {
+type StacksType = {
+  [key: string]: {
+    label: string;
+    icon: ReactElement;
+    backgroundColor: string;
+    color: string;
+  };
+};
+
+export const stacks: StacksType = {
   react: {
     label: "React.js",
     icon: <FaReact />,

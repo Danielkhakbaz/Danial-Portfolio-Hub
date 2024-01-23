@@ -18,7 +18,7 @@ const Chats = async ({ data: { user } }: ChatsProps) => {
       {[1, 2, 3, 4].map((_item, index) => (
         <Flex key={index} alignItems="flex-start" gap={2}>
           <Flex>
-            {!user.image ? (
+            {user.image ? (
               <Image
                 width={30}
                 height={30}

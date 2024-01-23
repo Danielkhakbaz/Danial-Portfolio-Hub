@@ -1,8 +1,25 @@
+import { StaticImageData } from "next/image";
 import ISCLogo from "assets/logos/isc-logo.jpeg";
 import HadishLogo from "assets/logos/hadish-logo.jpeg";
 import CrossLogo from "assets/logos/cross-logo.png";
 
-export const workExperiences = [
+type WorkExperiencesType = {
+  logo: {
+    src: StaticImageData;
+    alt: string;
+  };
+  position: string;
+  company_name: string;
+  location: string;
+  timeline: string;
+  info: string;
+  descriptions: {
+    paragraph: string;
+  }[];
+  divider?: boolean;
+};
+
+export const workExperiences: WorkExperiencesType[] = [
   {
     logo: { src: ISCLogo, alt: "Informatics Services Corporation(ISC)'s logo" },
     position: "Front-end Developer",

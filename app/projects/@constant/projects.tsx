@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import { stacks } from "app/projects/@constant/stacks";
+import { poweredBy } from "app/projects/@constant/powered-by";
 import SampleImage from "assets/images/Sketch.jpg";
 import { Link, Flex, Badge } from "@chakra-ui/react";
 import { FaRightFromBracket } from "react-icons/fa6";
@@ -14,6 +15,11 @@ type ProjectsType = {
     src: StaticImageData;
     alt: string;
   }[];
+  poweredBy: {
+    label: string;
+    icon: ReactElement;
+    backgroundColor: string;
+  };
   sections: {
     label: string;
     component: ReactElement;
@@ -31,6 +37,7 @@ export const projects: ProjectsType[] = [
       { src: SampleImage, alt: "1" },
       { src: SampleImage, alt: "2" },
     ],
+    poweredBy: poweredBy.github,
     sections: [
       {
         label: "Website",
@@ -118,6 +125,7 @@ export const projects: ProjectsType[] = [
       { src: SampleImage, alt: "1" },
       { src: SampleImage, alt: "2" },
     ],
+    poweredBy: poweredBy.vercel,
     sections: [
       {
         label: "Website",
@@ -205,6 +213,7 @@ export const projects: ProjectsType[] = [
       { src: SampleImage, alt: "1" },
       { src: SampleImage, alt: "2" },
     ],
+    poweredBy: poweredBy.vercel,
     sections: [
       {
         label: "Website",
@@ -292,6 +301,7 @@ export const projects: ProjectsType[] = [
       { src: SampleImage, alt: "1" },
       { src: SampleImage, alt: "2" },
     ],
+    poweredBy: poweredBy.github,
     sections: [
       {
         label: "Website",
@@ -379,6 +389,7 @@ export const projects: ProjectsType[] = [
       { src: SampleImage, alt: "1" },
       { src: SampleImage, alt: "2" },
     ],
+    poweredBy: poweredBy.vercel,
     sections: [
       {
         label: "Website",

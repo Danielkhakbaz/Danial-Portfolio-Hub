@@ -5,7 +5,15 @@ import PageTransition from "components/page-transition/page-transition";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import CustomBadge from "components/custom-badge/custom-badge";
 import { projects } from "app/projects/@constant/projects";
-import { Flex, Button, Heading, Text, Divider } from "@chakra-ui/react";
+import {
+  Flex,
+  Button,
+  Heading,
+  Text,
+  Divider,
+  Center,
+  Badge,
+} from "@chakra-ui/react";
 import { FaArrowLeft } from "react-icons/fa6";
 
 type ProjectsIDProps = {
@@ -87,6 +95,21 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
             />
           ))}
         </Flex>
+        <Center fontSize={14}>
+          Powered by{" "}
+          <Badge
+            fontSize={13}
+            backgroundColor={project.poweredBy.backgroundColor}
+            display="flex"
+            alignItems="center"
+            gap={2}
+            textTransform="none"
+            marginLeft={2}
+          >
+            {project.poweredBy.icon}
+            {project.poweredBy.label}
+          </Badge>
+        </Center>
       </Flex>
     </PageTransition>
   );

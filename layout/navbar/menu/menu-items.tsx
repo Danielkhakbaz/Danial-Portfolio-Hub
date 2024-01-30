@@ -21,7 +21,7 @@ export const WebMenuItems = () => {
 
   return (
     <>
-      {menuItems.map(({ href, label, icon }) => {
+      {menuItems.map(({ href, label }) => {
         const isActive = path === href || path.startsWith(`${href}/`);
 
         return (
@@ -41,7 +41,6 @@ export const WebMenuItems = () => {
               }}
             >
               {label}
-              <Flex color={useColorModeValue("purple", "orange")}>{icon}</Flex>
             </Flex>
             {isActive && (
               <MotionComponent

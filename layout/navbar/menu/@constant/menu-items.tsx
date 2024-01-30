@@ -4,7 +4,6 @@ import {
   FaLayerGroup,
   FaMoneyBillWave,
   FaCode,
-  FaQuestion,
   FaComments,
 } from "react-icons/fa";
 
@@ -12,7 +11,6 @@ type MenuItemsType = {
   href: string;
   label: string;
   mobileIcon: ReactElement;
-  icon?: ReactElement;
 };
 
 export const menuItems: MenuItemsType[] = [
@@ -40,6 +38,5 @@ export const menuItems: MenuItemsType[] = [
     href: "/guestbook",
     label: "Guestbook",
     mobileIcon: <FaComments style={{ fontSize: "15px" }} />,
-    icon: <FaQuestion />,
   },
 ];

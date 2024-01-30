@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import SubmitButton from "app/guestbook/@components/authenticated/@components/submit-button/submit-button";
 import Signout from "app/guestbook/@components/authenticated/@components/sign-out/sign-out";
+import { addChat } from "actions/add-chat";
 import {
   Flex,
   FormControl,
@@ -8,7 +9,6 @@ import {
   Input,
   FormHelperText,
 } from "@chakra-ui/react";
-import { addChat } from "actions/add-chat";
 
 type AuthenticatedProps = {
   image: string;
@@ -27,7 +27,10 @@ const Authenticated = async ({ image, user }: AuthenticatedProps) => {
 
     addChat({ image, user, message });
 
-    return NextResponse.json({ message: "SUCCESS" }, { status: 201 });
+    return NextResponse.json(
+      { message: "Chat got added successfully!" },
+      { status: 201 }
+    );
   };
 
   return (

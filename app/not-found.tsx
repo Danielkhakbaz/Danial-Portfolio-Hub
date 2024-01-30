@@ -15,7 +15,7 @@ const NotFound = async () => {
         <Heading size="2xl" fontWeight="bold" marginBottom={4}>
           NOT FOUND!
         </Heading>
-        <Heading as="h3" fontSize="15rem" fontWeight="extrabold">
+        <Heading as="h3" fontWeight="extrabold" fontSize="15rem">
           404
         </Heading>
         <Flex flexDirection="column" textAlign="center" marginTop={8}>

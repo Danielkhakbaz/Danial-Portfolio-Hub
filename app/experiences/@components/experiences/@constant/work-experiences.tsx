@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import ISCLogo from "assets/logos/isc-logo.jpeg";
-import HadishLogo from "assets/logos/hadish-logo.jpeg";
-import CrossLogo from "assets/logos/cross-logo.png";
+import ISCLogo from "assets/logos/companies/isc-logo.jpeg";
+import HadishLogo from "assets/logos/companies/hadish-logo.jpeg";
+import CrossLogo from "assets/logos/companies/cross-logo.png";
 
 type WorkExperiencesType = {
   logo: {

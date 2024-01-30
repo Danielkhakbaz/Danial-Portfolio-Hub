@@ -1,9 +1,12 @@
+"use client";
+
 import NextLink from "next/link";
+import Logo from "layout/navbar/@components/logo/logo";
 import ThemeController from "components/theme-controller/theme-controller";
 import { WebMenuItems, MobileMenuItems } from "layout/navbar/menu/menu-items";
-import { Container, Flex, Link, Text, Heading } from "@chakra-ui/react";
+import { Container, Flex, Link } from "@chakra-ui/react";
 
-const Navbar = async () => {
+const Navbar = () => {
   return (
     <Container
       maxWidth="container.md"
@@ -20,10 +23,9 @@ const Navbar = async () => {
           borderRadius={4}
           paddingX={2}
           paddingY={0.5}
-          _hover={{ backgroundColor: "ButtonFace" }}
+          _hover={{ transform: "scale(1.1)" }}
         >
-          <Text>Logo</Text>
-          <Heading size="sm">Danial Khakbaz</Heading>
+          <Logo />
         </Link>
       </Flex>
       <Flex

@@ -2,10 +2,10 @@ import NextLink from "next/link";
 import { getServerSession } from "next-auth";
 import PageTransition from "components/page-transition/page-transition";
 import Authenticated from "app/guestbook/@components/authenticated/authenticated";
-import Chats from "app/guestbook/@components/chats/chats";
 import Unauthenticated from "app/guestbook/@components/unauthenticated/unauthenticated";
+import Chats from "app/guestbook/@components/chats/chats";
 import { authOptions } from "auth/authOptions";
-import { Flex, Heading, Text, Link } from "@chakra-ui/react";
+import { Flex, Heading, Text, Link, Divider } from "@chakra-ui/react";
 
 const GuestbookPage = async () => {
   const session = await getServerSession(authOptions);
@@ -24,15 +24,17 @@ const GuestbookPage = async () => {
             )
           </Text>
         </Heading>
-        <Flex flexDirection="column" gap={6}>
+        <Flex flexDirection="column" gap={4}>
           {session ? (
-            <>
-              <Authenticated />
-              <Chats data={session as never} />
-            </>
+            <Authenticated
+              image={session.user!.image!}
+              user={session.user!.name!}
+            />
           ) : (
             <Unauthenticated />
           )}
+          <Divider />
+          <Chats />
         </Flex>
       </Flex>
     </PageTransition>

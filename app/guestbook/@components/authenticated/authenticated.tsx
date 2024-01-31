@@ -1,5 +1,6 @@
+"use client";
+
 import { NextResponse } from "next/server";
-import SubmitButton from "app/guestbook/@components/authenticated/@components/submit-button/submit-button";
 import Signout from "app/guestbook/@components/authenticated/@components/sign-out/sign-out";
 import { addChat } from "actions/add-chat";
 import {
@@ -7,7 +8,9 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Button,
   FormHelperText,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 type AuthenticatedProps = {
@@ -15,10 +18,8 @@ type AuthenticatedProps = {
   user: string;
 };
 
-const Authenticated = async ({ image, user }: AuthenticatedProps) => {
+const Authenticated = ({ image, user }: AuthenticatedProps) => {
   const chatAction = async (data: FormData) => {
-    "use server";
-
     const message = data.get("message");
 
     if (!message || typeof message !== "string") {
@@ -45,7 +46,12 @@ const Authenticated = async ({ image, user }: AuthenticatedProps) => {
               placeholder="Write anything you want..."
               isRequired
             />
-            <SubmitButton />
+            <Button
+              colorScheme={useColorModeValue("purple", "yellow")}
+              type="submit"
+            >
+              Submit
+            </Button>
           </Flex>
           <FormHelperText>
             <Signout />

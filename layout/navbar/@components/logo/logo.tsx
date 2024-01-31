@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import DanialKhakbazWhiteLogo from "assets/logos/dk-logo-white.jpeg";
-import DanialKhakbazBlackLogo from "assets/logos/dk-logo-black.jpeg";
+import DanialKhakbazWhiteLogo from "assets/logos/dk-logo-white.png";
+import DanialKhakbazBlackLogo from "assets/logos/dk-logo-black.png";
 import { useColorModeValue } from "@chakra-ui/react";
 
 const Logo = () => {

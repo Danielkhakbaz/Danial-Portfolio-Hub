@@ -20,6 +20,7 @@ const Navbar = () => {
           as={NextLink}
           href="/"
           width="fit-content"
+          transition=".4s"
           borderRadius={4}
           paddingX={2}
           paddingY={0.5}

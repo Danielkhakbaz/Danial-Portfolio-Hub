@@ -52,7 +52,7 @@ const Education = async () => {
                 >
                   <Image
                     width={70}
-                    height={60}
+                    height={70}
                     src={history.logo}
                     alt="Islamic Azad University's image"
                   />

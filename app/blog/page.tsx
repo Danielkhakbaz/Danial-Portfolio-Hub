@@ -1,17 +1,30 @@
-import Image from "next/image";
+import Link from "next/link";
 import PageTransition from "components/page-transition/page-transition";
-import NoPosts from "assets/images/no-posts.gif";
-import { Flex, Heading, Center } from "@chakra-ui/react";
+import Card from "app/blog/@components/card/card";
+import { blogPosts } from "app/blog/@constant/posts";
+import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
 
 const BlogPage = async () => {
   return (
     <PageTransition>
       <Flex flexDirection="column" gap={6}>
         <Heading>Blog</Heading>
-        <Flex justifyContent="center">
-          <Image src={NoPosts} alt="" />
-        </Flex>
-        <Center>There&apos;s no post yet :(</Center>
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+          gap={6}
+        >
+          {blogPosts.map((post) => (
+            <GridItem as={Link} href={`/blog/${post.link}`} key={post.link}>
+              <Card
+                title={post.title}
+                date={post.date}
+                neededTime={post.neededTime}
+                coverImage={post.coverImage}
+                alt={post.alt}
+              />
+            </GridItem>
+          ))}
+        </Grid>
       </Flex>
     </PageTransition>
   );

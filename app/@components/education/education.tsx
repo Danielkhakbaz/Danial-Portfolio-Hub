@@ -1,35 +1,11 @@
 import { Fragment } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import HomePageSectionMaker from "app/@components/@utils/homepage-section-maker/homepage-section-maker";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
-import AzadUniversityLogo from "assets/logos/azad-university-logo.jpeg";
+import { educationalHistory } from "app/@components/education/@constant/education-experiences";
 import { Flex, Text, Heading, Divider } from "@chakra-ui/react";
 
-type EducationHistoryType = {
-  logo: StaticImageData;
-  title: string;
-  college: string;
-  years: string;
-  divider?: boolean;
-};
-
 const Education = async () => {
-  const educationalHistory: EducationHistoryType[] = [
-    {
-      logo: AzadUniversityLogo,
-      title: "B.S in Computer Engineering",
-      college: "IAU (West-Tehran Branch)",
-      years: "(2018-2023)",
-      divider: true,
-    },
-    {
-      logo: AzadUniversityLogo,
-      title: "M.S in Computer Engineering",
-      college: "IAU (South-Tehran Branch)",
-      years: "(2023-Current)",
-    },
-  ];
-
   return (
     <HomePageSectionMaker label="Education">
       <Flex flexDirection="column" gap={6}>

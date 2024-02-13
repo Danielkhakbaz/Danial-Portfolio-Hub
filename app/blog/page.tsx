@@ -20,7 +20,7 @@ const BlogPage = async () => {
                 date={post.date}
                 neededTime={post.neededTime}
                 coverImage={post.coverImage}
-                alt={post.alt}
+                alt={post.coverImageAlt}
               />
             </GridItem>
           ))}

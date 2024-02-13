@@ -5,32 +5,30 @@ import DanialKhakbazImage from "assets/images/danial-khakbaz.jpg";
 import KillProcesses from "assets/images/blog-posts/kill-processes.jpeg";
 import DisableCorsOnChrome from "assets/images/blog-posts/disable-cors-on-chrome.jpeg";
 import DeleteDirectories from "assets/images/blog-posts/delete-directories.png";
-import { Flex, Text, Code, Heading, Link, Divider } from "@chakra-ui/react";
+import { Flex, Heading, Text, Code, Link, Divider } from "@chakra-ui/react";
 
 type BlogPostsType = {
-  author: string;
-  authorImage: StaticImageData;
   link: string;
   title: string;
-  description: string;
+  author: string;
+  authorImage: StaticImageData;
   date: string;
   neededTime: number;
   coverImage: StaticImageData;
-  alt: string;
+  coverImageAlt: string;
   content: ReactElement;
 }[];
 
 export const blogPosts: BlogPostsType = [
   {
-    author: "Danial Khakbaz",
-    authorImage: DanialKhakbazImage,
     link: "how-to-kill-process-on-mac",
     title: "How to kill process on MacOS",
-    description: "",
+    author: "Danial Khakbaz",
+    authorImage: DanialKhakbazImage,
     date: "February 13, 2024",
-    neededTime: 4,
+    neededTime: 1,
     coverImage: KillProcesses,
-    alt: "Killing the processes on mac",
+    coverImageAlt: "Killing the processes on mac",
     content: (
       <Flex flexDirection="column" gap={4}>
         <Text textAlign="justify">
@@ -42,7 +40,7 @@ export const blogPosts: BlogPostsType = [
           doesn&apos;t support <Code>-p</Code>), use <Code>lsof</Code>
         </Text>
         <Code>lsof -i tcp:3000</Code>
-        <Divider borderWidth={1.5} borderColor="gray" />
+        <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>
           <li>
@@ -62,15 +60,14 @@ export const blogPosts: BlogPostsType = [
     ),
   },
   {
-    author: "Danial Khakbaz",
-    authorImage: DanialKhakbazImage,
     link: "how-to-disable-cors-on-chrome",
     title: "How to disable CORS on chrome",
-    description: "",
+    author: "Danial Khakbaz",
+    authorImage: DanialKhakbazImage,
     date: "February 11, 2024",
-    neededTime: 3,
+    neededTime: 2,
     coverImage: DisableCorsOnChrome,
-    alt: "disabling cors on chrome",
+    coverImageAlt: "disabling cors on chrome",
     content: (
       <Flex flexDirection="column" gap={4}>
         <Text textAlign="justify">
@@ -123,7 +120,7 @@ export const blogPosts: BlogPostsType = [
           <Code>--user-data-dir=</Code> vs{" "}
           <Code>--user-data-dir=/some/path</Code> for more details below.
         </Text>
-        <Divider borderWidth={1.5} borderColor="gray" />
+        <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>
           <li>
@@ -143,15 +140,14 @@ export const blogPosts: BlogPostsType = [
     ),
   },
   {
-    author: "Danial Khakbaz",
-    authorImage: DanialKhakbazImage,
     link: "how-to-delete-directories-on-mac",
     title: "How to delete directories on MacOS",
-    description: "",
+    author: "Danial Khakbaz",
+    authorImage: DanialKhakbazImage,
     date: "February 09, 2024",
     neededTime: 2,
     coverImage: DeleteDirectories,
-    alt: "deleting directories on mac",
+    coverImageAlt: "deleting directories on mac",
     content: (
       <Flex flexDirection="column" gap={4}>
         <Text as="b" fontSize={18} textAlign="justify">
@@ -187,7 +183,7 @@ export const blogPosts: BlogPostsType = [
         <li>
           <Code>-v</Code> = to explain what is being done
         </li>
-        <Divider borderWidth={1.5} borderColor="gray" />
+        <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>
           <li>

@@ -26,6 +26,7 @@ const BlogID = async ({ params }: BlogIDProps) => {
     <PageTransition>
       <Flex flexDirection="column" gap={4}>
         <BlogNavbar
+          id={post.id}
           title={post.title}
           author={post.author}
           authorImage={post.authorImage}

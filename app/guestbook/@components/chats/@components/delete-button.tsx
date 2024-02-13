@@ -1,6 +1,6 @@
 "use client";
 
-import { deleteChat } from "actions/delete-chat";
+import { deleteChat } from "actions/chat";
 import { FaDeleteLeft } from "react-icons/fa6";
 
 type DeleteButtonProps = {

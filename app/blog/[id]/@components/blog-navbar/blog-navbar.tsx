@@ -1,11 +1,14 @@
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
+import Views from "app/blog/[id]/@components/blog-navbar/@components/views/views";
 import CopyClipboard from "app/blog/[id]/@components/copy-clipboard/copy-clipboard";
+import { getBlogPost } from "actions/blog";
 import { Flex, Button, Heading, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaRegClock } from "react-icons/fa6";
 
 type BlogNavbarProps = {
+  id: number;
   title: string;
   author: string;
   authorImage: StaticImageData;
@@ -16,6 +19,7 @@ type BlogNavbarProps = {
 };
 
 const BlogNavbar = async ({
+  id,
   title,
   author,
   authorImage,
@@ -24,6 +28,8 @@ const BlogNavbar = async ({
   coverImage,
   coverImageAlt,
 }: BlogNavbarProps) => {
+  const blogPost = await getBlogPost({ id });
+
   return (
     <>
       <Flex gap={4}>
@@ -60,19 +66,20 @@ const BlogNavbar = async ({
               <Text fontWeight="bold" fontSize={13} opacity={0.6}>
                 {date}
               </Text>
+              <Text
+                fontSize={13}
+                display="inline-flex"
+                alignItems="center"
+                gap={1}
+                opacity={0.6}
+              >
+                <FaRegClock />
+                {neededTime} min read
+              </Text>
             </Flex>
           </Flex>
           <Flex alignItems="center" gap={2}>
-            <Text
-              fontSize={13}
-              display="inline-flex"
-              alignItems="center"
-              gap={1}
-              opacity={0.6}
-            >
-              <FaRegClock />
-              {neededTime} min read
-            </Text>
+            <Views id={blogPost!.id} view={blogPost!.view} />
             <CopyClipboard />
           </Flex>
         </Flex>

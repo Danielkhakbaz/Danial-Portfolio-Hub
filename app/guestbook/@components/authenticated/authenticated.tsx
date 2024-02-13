@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server";
 import Signout from "app/guestbook/@components/authenticated/@components/sign-out/sign-out";
-import { addChat } from "actions/add-chat";
+import { addChat } from "actions/chat";
 import {
   Flex,
   FormControl,

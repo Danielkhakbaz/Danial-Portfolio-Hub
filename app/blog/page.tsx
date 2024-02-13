@@ -16,9 +16,9 @@ const BlogPage = async () => {
           {blogPosts.map((post) => (
             <GridItem as={Link} href={`/blog/${post.link}`} key={post.link}>
               <Card
+                id={post.id}
                 title={post.title}
                 date={post.date}
-                neededTime={post.neededTime}
                 coverImage={post.coverImage}
                 alt={post.coverImageAlt}
               />

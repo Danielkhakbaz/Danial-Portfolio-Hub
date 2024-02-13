@@ -1,7 +1,7 @@
 "use server";
 
-import { Prisma } from "prisma/client/client";
 import { revalidatePath } from "next/cache";
+import { Prisma } from "prisma/client/client";
 
 type ChatType = {
   image: string;
@@ -15,6 +15,16 @@ export const addChat = async ({ image, user, message }: ChatType) => {
       image,
       user,
       message,
+    },
+  });
+
+  revalidatePath("/guestbook");
+};
+
+export const deleteChat = async (id: number) => {
+  await Prisma.chat.delete({
+    where: {
+      id,
     },
   });
 

@@ -1,23 +1,19 @@
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
+import { getBlogPost } from "actions/blog";
 import { Flex, Heading, Text } from "@chakra-ui/react";
-import { FaRegClock } from "react-icons/fa";
 
 type CardProps = {
+  id: number;
   title: string;
   date: string;
-  neededTime: number;
   coverImage: StaticImageData;
   alt: string;
 };
 
-const Card = async ({
-  title,
-  date,
-  neededTime,
-  coverImage,
-  alt,
-}: CardProps) => {
+const Card = async ({ id, title, date, coverImage, alt }: CardProps) => {
+  const post = await getBlogPost({ id });
+
   return (
     <ColorModeComponent
       firstColor="#E5E5E5"
@@ -40,9 +36,7 @@ const Card = async ({
           src={coverImage}
           alt={alt}
           style={{
-            maxWidth: "260px",
-            width: "100%",
-            height: "145px",
+            minHeight: "145px",
             borderRadius: "0.4rem",
           }}
         />
@@ -55,7 +49,12 @@ const Card = async ({
         >
           {title}
         </Heading>
-        <Flex width="100%" justifyContent="space-between" marginTop={2}>
+        <Flex
+          width="100%"
+          flexDirection={{ base: "column", md: "row" }}
+          justifyContent="space-between"
+          marginTop={2}
+        >
           <Text fontSize={13} textAlign="justify" opacity={0.6}>
             {date}
           </Text>
@@ -66,8 +65,7 @@ const Card = async ({
             gap={1}
             opacity={0.6}
           >
-            <FaRegClock />
-            {neededTime} min read
+            {post!.view.toLocaleString("eng")} views
           </Text>
         </Flex>
       </Flex>

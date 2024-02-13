@@ -15,6 +15,12 @@ model Chat {
   createdAt DateTime @default(now())
 }
 
+model BlogPost {
+  id    Int    @id @default(autoincrement())
+  title String
+  view  Int    @default(0)
+}
+
 model Account {
   id                String  @id @default(cuid())
   userId            String

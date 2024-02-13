@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, useToast } from "@chakra-ui/react";
+import { Tooltip, Button, useToast, useColorModeValue } from "@chakra-ui/react";
 import { FaRegCopy } from "react-icons/fa6";
 
 const CopyClipboard = () => {
@@ -27,9 +27,15 @@ const CopyClipboard = () => {
   };
 
   return (
-    <Button colorScheme="gray" onClick={handleClipboard}>
-      <FaRegCopy />
-    </Button>
+    <Tooltip
+      hasArrow
+      label="Copy to clipboard"
+      backgroundColor={useColorModeValue("purple.500", "orange.300")}
+    >
+      <Button colorScheme="gray" onClick={handleClipboard}>
+        <FaRegCopy />
+      </Button>
+    </Tooltip>
   );
 };
 

@@ -80,8 +80,7 @@ const BlogID = async ({ params }: BlogIDProps) => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex flexDirection="column" gap={2.5}></Flex>
-        <Flex flexDirection="column" gap={6}></Flex>
+        {post.content}
       </Flex>
     </PageTransition>
   );

@@ -30,7 +30,7 @@ const CopyClipboard = () => {
     <Tooltip
       hasArrow
       label="Copy to clipboard"
-      backgroundColor={useColorModeValue("purple.500", "orange.300")}
+      backgroundColor={useColorModeValue("#805AD5", "#FBD38D")}
     >
       <Button colorScheme="gray" onClick={handleClipboard}>
         <FaRegCopy />

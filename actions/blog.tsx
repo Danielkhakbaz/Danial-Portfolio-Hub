@@ -5,10 +5,9 @@ import { Prisma } from "prisma/client/client";
 
 type BlogPostType = {
   id: number;
-  view: number;
 };
 
-export const getBlogPost = async ({ id }: Omit<BlogPostType, "view">) => {
+export const getBlogPost = async ({ id }: BlogPostType) => {
   const post = await Prisma.blogPost.findUnique({
     where: {
       id,
@@ -18,13 +17,19 @@ export const getBlogPost = async ({ id }: Omit<BlogPostType, "view">) => {
   return post;
 };
 
-export const addViewer = async ({ id, view }: BlogPostType) => {
-  await Prisma.blogPost.update({
+export const getAndUpdateBlogPost = async ({ id }: BlogPostType) => {
+  const post = await getBlogPost({ id });
+
+  const newPost = await Prisma.blogPost.update({
     where: {
       id,
     },
-    data: { view },
+    data: {
+      view: post!.view + 1,
+    },
   });
 
   revalidatePath("/blog");
+
+  return newPost;
 };

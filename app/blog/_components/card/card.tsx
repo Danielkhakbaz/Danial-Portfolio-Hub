@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
+import CountView from "components/count-view/count-view";
 import { getBlogPost } from "actions/blog";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
@@ -65,7 +66,7 @@ const Card = async ({ id, title, date, coverImage, alt }: CardProps) => {
             gap={1}
             opacity={0.6}
           >
-            {post!.view.toLocaleString("eng")} views
+            <CountView view={post!.view} />
           </Text>
         </Flex>
       </Flex>

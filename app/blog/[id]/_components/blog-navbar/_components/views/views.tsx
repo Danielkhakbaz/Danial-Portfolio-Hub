@@ -1,6 +1,6 @@
+import CountView from "components/count-view/count-view";
 import { getAndUpdateBlogPost } from "actions/blog";
 import { Flex, Text } from "@chakra-ui/react";
-import { FaRegEye } from "react-icons/fa6";
 
 type ViewsProps = {
   id: number;
@@ -18,7 +18,7 @@ const Views = async ({ id }: ViewsProps) => {
         gap={1}
         opacity={0.6}
       >
-        {post!.view.toLocaleString("eng")} views <FaRegEye />
+        <CountView view={post!.view} />
       </Text>
     </Flex>
   );

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import Views from "app/blog/[id]/_components/blog-navbar/_components/views/views";
-import CopyClipboard from "../copy-clipboard/copy-clipboard";
+import CopyClipboard from "app/blog/[id]/_components/copy-clipboard/copy-clipboard";
 import { getBlogPost } from "actions/blog";
 import { Flex, Button, Heading, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaRegClock } from "react-icons/fa6";
@@ -52,15 +52,26 @@ const BlogNavbar = async ({
         <Image width={10000} src={coverImage} alt={coverImageAlt} />
         <Flex width="100%" justifyContent="space-between">
           <Flex alignItems="center" gap={2}>
-            <Image
-              width={50}
-              height={50}
-              src={authorImage}
-              alt={`${author}'s image`}
-              style={{
+            <ColorModeComponent
+              firstColor="black"
+              secondColor="white"
+              mainStyles={{
+                border: "2px solid",
+              }}
+              styles={{
                 borderRadius: "100%",
               }}
-            />
+            >
+              <Image
+                width={50}
+                height={50}
+                src={authorImage}
+                alt={`${author}'s image`}
+                style={{
+                  borderRadius: "100%",
+                }}
+              />
+            </ColorModeComponent>
             <Flex flexDirection="column">
               <Text fontWeight="bold">{author}</Text>
               <Text fontWeight="bold" fontSize={13} opacity={0.6}>

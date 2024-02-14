@@ -1,5 +1,5 @@
-import HomePageSectionMaker from "app/#components/#utils/homepage-section-maker/homepage-section-maker";
-import { sections } from "app/#components/bio/#constant/sections";
+import HomePageSectionMaker from "app/_components/_utils/homepage-section-maker/homepage-section-maker";
+import { sections } from "app/_components/bio/_constant/sections";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 type SectionCreatorProps = {

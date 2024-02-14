@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import Image from "next/image";
-import HomePageSectionMaker from "app/#components/#utils/homepage-section-maker/homepage-section-maker";
+import HomePageSectionMaker from "app/_components/_utils/homepage-section-maker/homepage-section-maker";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
-import { educationalHistory } from "app/#components/education/#constant/educational-history";
+import { educationalHistory } from "app/_components/education/_constant/educational-history";
 import { Flex, Text, Heading, Divider } from "@chakra-ui/react";
 
 const Education = async () => {

@@ -1,4 +1,4 @@
-import { quotes } from "app/#components/fav-quote/#constant/quotes";
+import { quotes } from "app/_components/fav-quote/_constant/quotes";
 import { Center, Flex, Text } from "@chakra-ui/react";
 
 const FavQuote = async () => {

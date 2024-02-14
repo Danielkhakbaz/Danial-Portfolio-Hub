@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getServerSession } from "next-auth";
-import DeleteButton from "app/guestbook/#components/messages/#components/delete-button/delete-button";
+import DeleteButton from "app/guestbook/_components/messages/_components/delete-button/delete-button";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { Prisma } from "prisma/client/client";

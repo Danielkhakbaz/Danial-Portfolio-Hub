@@ -1,6 +1,6 @@
 import NextLink from "next/link";
-import HomePageSectionMaker from "app/#components/#utils/homepage-section-maker/homepage-section-maker";
-import { socials } from "app/#components/links/#constant/socials";
+import HomePageSectionMaker from "app/_components/_utils/homepage-section-maker/homepage-section-maker";
+import { socials } from "app/_components/links/_constant/socials";
 import { Flex, Link } from "@chakra-ui/react";
 
 const Links = async () => {

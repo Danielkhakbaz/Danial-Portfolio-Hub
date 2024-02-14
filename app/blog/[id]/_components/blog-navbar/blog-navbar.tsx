@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
-import Views from "app/blog/[id]/#components/blog-navbar/#components/views/views";
-import CopyClipboard from "components/copy-clipboard/copy-clipboard";
+import Views from "app/blog/[id]/_components/blog-navbar/_components/views/views";
+import CopyClipboard from "../copy-clipboard/copy-clipboard";
 import { getBlogPost } from "actions/blog";
 import { Flex, Button, Heading, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaRegClock } from "react-icons/fa6";

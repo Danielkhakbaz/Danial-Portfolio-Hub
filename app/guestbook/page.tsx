@@ -1,9 +1,9 @@
 import NextLink from "next/link";
 import { getServerSession } from "next-auth";
 import PageTransition from "components/page-transition/page-transition";
-import Authenticated from "app/guestbook/#components/authenticated/authenticated";
-import Unauthenticated from "app/guestbook/#components/unauthenticated/unauthenticated";
-import Messages from "app/guestbook/#components/messages/messages";
+import Authenticated from "app/guestbook/_components/authenticated/authenticated";
+import Unauthenticated from "app/guestbook/_components/unauthenticated/unauthenticated";
+import Messages from "app/guestbook/_components/messages/messages";
 import { authOptions } from "auth/authOptions";
 import { Flex, Heading, Text, Link, Divider } from "@chakra-ui/react";
 

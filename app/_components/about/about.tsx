@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HomePageSectionMaker from "app/#components/#utils/homepage-section-maker/homepage-section-maker";
+import HomePageSectionMaker from "app/_components/_utils/homepage-section-maker/homepage-section-maker";
 import { Flex, Text, Button } from "@chakra-ui/react";
 import { FaAngleRight, FaCircleArrowDown } from "react-icons/fa6";
 

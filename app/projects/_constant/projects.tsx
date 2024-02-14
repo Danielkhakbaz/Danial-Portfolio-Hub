@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 import { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
-import { stacks } from "app/projects/@constant/stacks";
-import { poweredBy } from "app/projects/@constant/powered-by";
+import { stacks } from "app/projects/_constant/stacks";
+import { poweredBy } from "app/projects/_constant/powered-by";
 import SampleImage from "assets/images/Sketch.jpg";
 import { Link, Flex, Badge } from "@chakra-ui/react";
 import { FaRightFromBracket } from "react-icons/fa6";

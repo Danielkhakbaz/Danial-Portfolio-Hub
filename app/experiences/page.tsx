@@ -1,6 +1,6 @@
 import PageTransition from "components/page-transition/page-transition";
-import Skills from "app/experiences/@components/skills/skills";
-import Experiences from "app/experiences/@components/experiences/experiences";
+import Skills from "app/experiences/_components/skills/skills";
+import Experiences from "app/experiences/_components/experiences/experiences";
 import { Flex, Heading, Divider } from "@chakra-ui/react";
 
 const ExperiencesPage = async () => {

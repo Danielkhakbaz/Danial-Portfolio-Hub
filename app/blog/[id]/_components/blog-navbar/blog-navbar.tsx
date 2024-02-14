@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
-import Views from "app/blog/[id]/@components/blog-navbar/@components/views/views";
-import CopyClipboard from "app/blog/[id]/@components/copy-clipboard/copy-clipboard";
+import Views from "app/blog/[id]/_components/blog-navbar/_components/views/views";
+import CopyClipboard from "app/blog/[id]/_components/copy-clipboard/copy-clipboard";
 import { getBlogPost } from "actions/blog";
 import { Flex, Button, Heading, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaRegClock } from "react-icons/fa6";
@@ -28,7 +28,7 @@ const BlogNavbar = async ({
   coverImage,
   coverImageAlt,
 }: BlogNavbarProps) => {
-  const blogPost = await getBlogPost({ id });
+  const post = await getBlogPost({ id });
 
   return (
     <>
@@ -79,7 +79,7 @@ const BlogNavbar = async ({
             </Flex>
           </Flex>
           <Flex alignItems="center" gap={2}>
-            <Views id={blogPost!.id} view={blogPost!.view} />
+            <Views id={post!.id} />
             <CopyClipboard />
           </Flex>
         </Flex>

@@ -1,7 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
-import Logo from "layout/navbar/@components/logo/logo";
+import Logo from "layout/navbar/_components/logo/logo";
 import ThemeController from "components/theme-controller/theme-controller";
 import { WebMenuItems, MobileMenuItems } from "layout/navbar/menu/menu-items";
 import { Container, Flex, Link } from "@chakra-ui/react";

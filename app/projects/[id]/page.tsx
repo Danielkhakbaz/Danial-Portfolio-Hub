@@ -4,7 +4,7 @@ import Image from "next/image";
 import PageTransition from "components/page-transition/page-transition";
 import ColorModeComponent from "components/color-mode-component/color-mode-component";
 import CustomBadge from "components/custom-badge/custom-badge";
-import { projects } from "app/projects/@constant/projects";
+import { projects } from "app/projects/_constant/projects";
 import {
   Flex,
   Button,

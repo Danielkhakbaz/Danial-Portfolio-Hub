@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
   FaSpotify,
 } from "react-icons/fa6";
-import styles from "app/@components/links/_constant/socials.module.css";
+import styles from "app/_components/links/_constant/socials.module.css";
 
 type SocialsType = {
   link: string;

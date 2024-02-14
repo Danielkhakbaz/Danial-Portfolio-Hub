@@ -1,7 +1,7 @@
 "use client";
 
 import { NextResponse } from "next/server";
-import Signout from "app/guestbook/@components/authenticated/@components/sign-out/sign-out";
+import Signout from "app/guestbook/_components/authenticated/_components/sign-out/sign-out";
 import { addChat } from "actions/chat";
 import {
   Flex,

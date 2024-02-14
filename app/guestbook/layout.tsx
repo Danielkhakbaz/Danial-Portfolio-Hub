@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 
-type RootLayoutProps = {
+type GuestbookLayoutProps = {
   children: ReactNode;
 };
 
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: "Danial Khakbaz | Guestbook",
 };
 
-const Layout = ({ children }: RootLayoutProps) => {
+const GuestbookLayout = ({ children }: GuestbookLayoutProps) => {
   return children;
 };
 
-export default Layout;
+export default GuestbookLayout;

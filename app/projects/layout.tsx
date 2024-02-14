@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 
-type RootLayoutProps = {
+type ProjectsLayoutProps = {
   children: ReactNode;
 };
 
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   title: "Danial Khakbaz | Projects",
 };
 
-const Layout = ({ children }: RootLayoutProps) => {
+const ProjectsLayout = ({ children }: ProjectsLayoutProps) => {
   return children;
 };
 
-export default Layout;
+export default ProjectsLayout;

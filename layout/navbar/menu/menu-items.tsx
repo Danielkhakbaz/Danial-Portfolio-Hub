@@ -3,7 +3,7 @@
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import MotionComponent from "components/motion/motion";
-import { menuItems } from "layout/navbar/menu/_constant/menu-items";
+import { menuItems } from "layout/navbar/menu/#constant/menu-items";
 import {
   Link,
   Flex,

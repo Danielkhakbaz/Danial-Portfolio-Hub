@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PageTransition from "components/page-transition/page-transition";
-import Card from "app/blog/_components/card/card";
-import { blogPosts } from "app/blog/_constant/posts";
+import Card from "app/blog/#components/card/card";
+import { blogPosts } from "app/blog/#constant/posts";
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
 
 const BlogPage = async () => {

@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Chat {
+model GuestbookMessage {
   id        Int      @id @default(autoincrement())
   image     String
   user      String

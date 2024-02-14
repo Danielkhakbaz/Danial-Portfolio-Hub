@@ -4,7 +4,7 @@ import { Prisma } from "prisma/client/client";
 export async function DELETE(request: NextRequest) {
   const body = await request.json();
 
-  const chat = await Prisma.chat.create({
+  const message = await Prisma.guestbookMessage.create({
     data: {
       image: body.image,
       user: body.user,
@@ -12,7 +12,7 @@ export async function DELETE(request: NextRequest) {
     },
   });
 
-  return NextResponse.json(chat, {
+  return NextResponse.json(message, {
     status: 201,
   });
 }

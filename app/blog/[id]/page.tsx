@@ -1,6 +1,6 @@
 import PageTransition from "components/page-transition/page-transition";
-import BlogNavbar from "app/blog/[id]/_components/blog-navbar/blog-navbar";
-import { blogPosts } from "app/blog/_constant/posts";
+import BlogNavbar from "app/blog/[id]/#components/blog-navbar/blog-navbar";
+import { blogPosts } from "app/blog/#constant/posts";
 import { Flex, Divider } from "@chakra-ui/react";
 
 type BlogIDProps = {

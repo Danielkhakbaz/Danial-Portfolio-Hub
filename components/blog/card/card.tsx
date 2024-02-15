@@ -36,6 +36,7 @@ const Card = async ({ id, title, date, coverImage, alt }: CardProps) => {
           height="100"
           src={coverImage}
           alt={alt}
+          priority
           style={{
             minHeight: "145px",
             borderRadius: "0.4rem",

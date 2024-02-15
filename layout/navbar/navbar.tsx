@@ -19,6 +19,7 @@ const Navbar = () => {
         <Link
           as={NextLink}
           href="/"
+          aria-label="Danial Khakbaz's logo"
           width="fit-content"
           transition=".4s"
           borderRadius={4}

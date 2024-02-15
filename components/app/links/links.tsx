@@ -8,7 +8,13 @@ const Links = async () => {
     <HomePageSectionMaker label="Links">
       <Flex justifyContent="space-between" flexWrap="wrap" gap={4}>
         {socials.map((social) => (
-          <Link as={NextLink} key={social.link} href={social.link} isExternal>
+          <Link
+            as={NextLink}
+            key={social.link}
+            href={social.link}
+            aria-label={`Danial Khakbaz's ${social.name}`}
+            isExternal
+          >
             {social.logo}
           </Link>
         ))}

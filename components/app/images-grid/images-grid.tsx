@@ -1,4 +1,3 @@
-import Image from "next/image";
 import DanialPlayingBasketball from "public/images/danial-at-basketball.webp";
 import DanialAtShomal from "public/images/danial-at-shomal.webp";
 import DanialFromWorkAtHome from "public/images/danial-from-work-at-home.webp";
@@ -24,14 +23,7 @@ const ImagesGrid = async () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-      >
-        <Image
-          src={DanialAtCafe}
-          alt=""
-          objectFit="cover"
-          objectPosition="center"
-        />
-      </GridItem>
+      />
       <GridItem
         gridRow="1 / 4"
         gridColumn="3 / 5"

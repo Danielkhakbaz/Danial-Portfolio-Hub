@@ -12,6 +12,7 @@ const Logo = () => {
       height={65}
       src={useColorModeValue(DanialKhakbazWhiteLogo, DanialKhakbazBlackLogo)}
       alt="Danial Khakbaz's logo"
+      priority
     />
   );
 };

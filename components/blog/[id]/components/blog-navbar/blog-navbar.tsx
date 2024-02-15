@@ -33,7 +33,7 @@ const BlogNavbar = async ({
   return (
     <>
       <Flex gap={4}>
-        <Link href="/blog">
+        <Link href="/blog" aria-label="back-button">
           <ColorModeComponent
             firstColor="black"
             secondColor="white"
@@ -49,7 +49,13 @@ const BlogNavbar = async ({
       </Flex>
       <Flex flexDirection="column" gap={4}>
         <Heading>{title}</Heading>
-        <Image width={10000} src={coverImage} alt={coverImageAlt} />
+        <Image
+          width={10000}
+          height={298}
+          src={coverImage}
+          alt={coverImageAlt}
+          priority
+        />
         <Flex width="100%" justifyContent="space-between">
           <Flex alignItems="center" gap={2}>
             <ColorModeComponent

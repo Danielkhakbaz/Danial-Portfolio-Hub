@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PageTransition from "components/page-transition/page-transition";
+import PageTransition from "utils/page-transition/page-transition";
 import { Flex, Heading, Button } from "@chakra-ui/react";
 
 const NotFound = async () => {

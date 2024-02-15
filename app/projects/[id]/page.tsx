@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import PageTransition from "components/page-transition/page-transition";
-import ColorModeComponent from "components/color-mode-component/color-mode-component";
-import CustomBadge from "components/custom-badge/custom-badge";
-import { projects } from "app/projects/_constant/projects";
+import PageTransition from "utils/page-transition/page-transition";
+import ColorModeComponent from "utils/color-mode-component/color-mode-component";
+import CustomBadge from "utils/custom-badge/custom-badge";
+import { projects } from "constants/projects/projects";
 import {
   Flex,
   Button,

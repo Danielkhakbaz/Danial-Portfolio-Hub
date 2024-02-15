@@ -1,12 +1,12 @@
-import PageTransition from "components/page-transition/page-transition";
-import ImagesGrid from "app/_components/images-grid/images-grid";
-import FavQuote from "app/_components/fav-quote/fav-quote";
-import Summary from "app/_components/summary/summary";
-import About from "app/_components/about/about";
-import Bio from "app/_components/bio/bio";
-import Interests from "app/_components/interests/interests";
-import Links from "app/_components/links/links";
-import Education from "app/_components/education/education";
+import PageTransition from "utils/page-transition/page-transition";
+import ImagesGrid from "components/app/images-grid/images-grid";
+import FavQuote from "components/app/fav-quote/fav-quote";
+import Summary from "components/app/summary/summary";
+import About from "components/app/about/about";
+import Bio from "components/app/bio/bio";
+import Interests from "components/app/interests/interests";
+import Links from "components/app/links/links";
+import Education from "components/app/education/education";
 import { Flex } from "@chakra-ui/react";
 
 const HomePage = async () => {

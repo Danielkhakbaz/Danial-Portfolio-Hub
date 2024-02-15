@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
-import ScrollToTop from "components/scroll-to-top/scroll-to-top";
+import ScrollToTop from "utils/scroll-to-top/scroll-to-top";
 import { SessionProviderFromNextAuth } from "providers/session/session";
 import { ChakraProvider } from "providers/chakra/chakra";
 import { LatoFont } from "theme/font";

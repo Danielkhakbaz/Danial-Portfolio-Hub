@@ -46,12 +46,12 @@ const Education = async () => {
                   gap={2}
                 >
                   {history.title}
-                  <Text fontWeight="bold" fontSize={12} opacity={0.6}>
+                  <Text fontWeight="bold" fontSize={12} color="#56585D">
                     {history.years}
                   </Text>
                 </Heading>
                 <Flex flexDirection="column">
-                  <Text fontSize={14} textAlign="justify" opacity={0.6}>
+                  <Text fontSize={14} textAlign="justify" color="#56585D">
                     {history.college}
                   </Text>
                 </Flex>

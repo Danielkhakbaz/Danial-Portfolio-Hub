@@ -48,7 +48,13 @@ const About = async () => {
             target="_blank"
             locale={false}
           >
-            <Button colorScheme="green" display="flex" gap={2}>
+            <Button
+              colorScheme="facebook"
+              backgroundColor="#375695"
+              color="white"
+              display="flex"
+              gap={2}
+            >
               <Text>Download CV</Text>
               <FaCircleArrowDown />
             </Button>

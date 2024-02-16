@@ -17,7 +17,7 @@ const FavQuote = async () => {
       <Flex width="100%" justifyContent="center">
         <Text display="inline-flex" alignItems="center" gap={2}>
           {quotes[randomNumberBetween0and2].text}
-          <Text as="span" fontSize={10} opacity={0.4}>
+          <Text as="span" fontSize={10} color="#969696">
             - {quotes[randomNumberBetween0and2].author}
           </Text>
         </Text>

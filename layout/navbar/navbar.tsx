@@ -1,10 +1,15 @@
 "use client";
 
 import NextLink from "next/link";
+import dynamic from "next/dynamic";
 import Logo from "components/layout/navbar/logo/logo";
 import ThemeController from "utils/theme-controller/theme-controller";
-import { WebMenuItems, MobileMenuItems } from "layout/navbar/menu/menu-items";
 import { Container, Flex, Link } from "@chakra-ui/react";
+
+const WebMenuItems = dynamic(() => import("layout/navbar/menu/menu-items"));
+const MobileMenuItems = dynamic(
+  () => import("layout/navbar/menu/mobile-menu-items")
+);
 
 const Navbar = () => {
   return (

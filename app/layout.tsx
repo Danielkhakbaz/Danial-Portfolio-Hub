@@ -1,12 +1,14 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Navbar from "layout/navbar/navbar";
-import Footer from "layout/footer/footer";
-import ScrollToTop from "utils/scroll-to-top/scroll-to-top";
 import { SessionProviderFromNextAuth } from "providers/session/session";
 import { ChakraProvider } from "providers/chakra/chakra";
 import { LatoFont } from "theme/font";
 import { Container } from "@chakra-ui/react";
+
+const Footer = dynamic(() => import("layout/footer/footer"));
+const ScrollToTop = dynamic(() => import("utils/scroll-to-top/scroll-to-top"));
 
 type RootLayoutProps = {
   children: ReactNode;

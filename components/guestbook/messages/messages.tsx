@@ -1,10 +1,17 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { getServerSession } from "next-auth";
-import DeleteButton from "components/guestbook/messages/components/delete-button/delete-button";
 import ColorModeComponent from "utils/color-mode-component/color-mode-component";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { Prisma } from "prisma/client/client";
 import { authOptions } from "auth/authOptions";
+
+const DeleteButton = dynamic(
+  () =>
+    import(
+      "components/guestbook/messages/components/delete-button/delete-button"
+    )
+);
 
 const Messages = async () => {
   const session = await getServerSession(authOptions);

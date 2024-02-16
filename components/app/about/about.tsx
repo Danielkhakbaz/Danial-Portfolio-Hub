@@ -1,7 +1,12 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import HomePageSectionMaker from "components/app/homepage-section-maker/homepage-section-maker";
 import { Flex, Text, Button } from "@chakra-ui/react";
-import { FaAngleRight, FaCircleArrowDown } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
+
+const DownloadCV = dynamic(
+  () => import("components/app/about/components/download-cv")
+);
 
 const About = async () => {
   return (
@@ -43,22 +48,7 @@ const About = async () => {
               <FaAngleRight />
             </Button>
           </Link>
-          <Link
-            href="/pdf/Danial_Khakbaz_Resume.pdf"
-            target="_blank"
-            locale={false}
-          >
-            <Button
-              colorScheme="facebook"
-              backgroundColor="#375695"
-              color="white"
-              display="flex"
-              gap={2}
-            >
-              <Text>Download CV</Text>
-              <FaCircleArrowDown />
-            </Button>
-          </Link>
+          <DownloadCV />
         </Flex>
       </Flex>
     </HomePageSectionMaker>

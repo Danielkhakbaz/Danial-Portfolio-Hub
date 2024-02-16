@@ -24,6 +24,8 @@ const Education = async () => {
                   }}
                   styles={{
                     borderRadius: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
                   }}
                 >
                   <Image

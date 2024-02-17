@@ -26,8 +26,8 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialAtCafe}
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             alt="Danial Khakbaz at cafe"
             placeholder="blur"
             rel="preload"
@@ -53,8 +53,8 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialPlayingBasketball}
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             alt="Danial Khakbaz playing basketball"
             placeholder="blur"
             rel="preload"
@@ -77,8 +77,8 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialAtShomal}
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             alt="Danial Khakbaz at the north of Iran"
             placeholder="blur"
             rel="preload"
@@ -102,8 +102,8 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialFromWorkAtHome}
-            width={500}
-            height={500}
+            width={800}
+            height={800}
             alt="Danial Khakbaz working from home"
             placeholder="blur"
             rel="preload"

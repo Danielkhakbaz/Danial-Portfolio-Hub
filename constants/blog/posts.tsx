@@ -182,15 +182,18 @@ export const blogPosts: BlogPostsType = [
           FYI: you can use letters <Code>-f</Code>, <Code>-r</Code>,{" "}
           <Code>-v</Code>:
         </Text>
-        <li>
-          <Code>-f</Code> = to ignore non-existent files, never prompt
-        </li>
-        <li>
-          <Code>-r</Code> = to remove directories and their contents recursively
-        </li>
-        <li>
-          <Code>-v</Code> = to explain what is being done
-        </li>
+        <ul>
+          <li>
+            <Code>-f</Code> = to ignore non-existent files, never prompt
+          </li>
+          <li>
+            <Code>-r</Code> = to remove directories and their contents
+            recursively
+          </li>
+          <li>
+            <Code>-v</Code> = to explain what is being done
+          </li>
+        </ul>
         <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>

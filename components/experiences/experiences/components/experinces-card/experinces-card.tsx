@@ -82,7 +82,7 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
         </Flex>
       </Flex>
       <Flex flexDirection="column" gap={1}>
-        <Text fontWeight="bold" textAlign="justify">
+        <Text fontWeight="bold" textAlign="justify" rel="preload">
           {experience.info}
         </Text>
         {experience.descriptions.map((description) => (
@@ -90,6 +90,7 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
             key={description.paragraph}
             fontWeight="bold"
             textAlign="justify"
+            rel="preload"
           >
             ‣ {description.paragraph}
           </Text>

@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 type MotionComponentProps = {
   tag: string;
@@ -16,12 +16,14 @@ const MotionComponent = ({
   children,
   ...motionProps
 }: MotionComponentProps) => {
-  const Tag = motion[tag as keyof typeof motion];
+  const Tag = m[tag as keyof typeof m];
 
   return (
-    <Tag className={className} {...motionProps}>
-      {children}
-    </Tag>
+    <LazyMotion features={domAnimation}>
+      <Tag className={className} {...motionProps}>
+        {children}
+      </Tag>
+    </LazyMotion>
   );
 };
 

@@ -1,3 +1,4 @@
+import ColorModeComponent from "utils/color-mode-component/color-mode-component";
 import CountView from "utils/count-view/count-view";
 import { getAndUpdateBlogPost } from "actions/blog";
 import { Flex, Text } from "@chakra-ui/react";
@@ -11,15 +12,17 @@ const Views = async ({ id }: ViewsProps) => {
 
   return (
     <Flex flexDirection="column" alignItems="flex-end">
-      <Text
-        fontSize={13}
-        display="inline-flex"
-        alignItems="center"
-        gap={1}
-        opacity={0.6}
+      <ColorModeComponent
+        firstColor="#56585D"
+        secondColor="#DEDEDE"
+        mainStyles={{
+          color: null,
+        }}
       >
-        <CountView view={post!.view} />
-      </Text>
+        <Text fontSize={13} display="inline-flex" alignItems="center" gap={1}>
+          <CountView view={post!.view} />
+        </Text>
+      </ColorModeComponent>
     </Flex>
   );
 };

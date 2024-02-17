@@ -36,9 +36,13 @@ const Card = async ({ id, title, date, coverImage, alt }: CardProps) => {
           height="100"
           src={coverImage}
           alt={alt}
+          rel="preload"
           priority
+          fetchPriority="high"
           style={{
             minHeight: "145px",
+            objectFit: "cover",
+            objectPosition: "center",
             borderRadius: "0.4rem",
           }}
         />
@@ -51,21 +55,16 @@ const Card = async ({ id, title, date, coverImage, alt }: CardProps) => {
         >
           {title}
         </Heading>
-        <Flex
-          width="100%"
-          flexDirection={{ base: "column", md: "row" }}
-          justifyContent="space-between"
-          marginTop={2}
-        >
-          <Text fontSize={13} textAlign="justify" opacity={0.6}>
+        <Flex width="100%" justifyContent="space-between" marginTop={2}>
+          <Text fontSize={13} color="#56585D" textAlign="justify">
             {date}
           </Text>
           <Text
             fontSize={13}
+            color="#56585D"
             display="inline-flex"
             alignItems="center"
             gap={1}
-            opacity={0.6}
           >
             <CountView view={post!.view} />
           </Text>

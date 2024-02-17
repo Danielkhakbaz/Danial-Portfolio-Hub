@@ -33,7 +33,7 @@ const BlogNavbar = async ({
   return (
     <>
       <Flex gap={4}>
-        <Link href="/blog" aria-label="back-button">
+        <Link href="/blog">
           <ColorModeComponent
             firstColor="black"
             secondColor="white"
@@ -41,7 +41,7 @@ const BlogNavbar = async ({
               borderColor: null,
             }}
           >
-            <Button variant="outline">
+            <Button variant="outline" aria-label="back-button">
               <FaArrowLeft />
             </Button>
           </ColorModeComponent>
@@ -54,7 +54,9 @@ const BlogNavbar = async ({
           height={298}
           src={coverImage}
           alt={coverImageAlt}
+          rel="preload"
           priority
+          fetchPriority="high"
         />
         <Flex width="100%" justifyContent="space-between">
           <Flex alignItems="center" gap={2}>
@@ -73,6 +75,9 @@ const BlogNavbar = async ({
                 height={50}
                 src={authorImage}
                 alt={`${author}'s image`}
+                rel="preload"
+                priority
+                fetchPriority="high"
                 style={{
                   borderRadius: "100%",
                 }}
@@ -80,19 +85,34 @@ const BlogNavbar = async ({
             </ColorModeComponent>
             <Flex flexDirection="column">
               <Text fontWeight="bold">{author}</Text>
-              <Text fontWeight="bold" fontSize={13} opacity={0.6}>
-                {date}
-              </Text>
-              <Text
-                fontSize={13}
-                display="inline-flex"
-                alignItems="center"
-                gap={1}
-                opacity={0.6}
+              <ColorModeComponent
+                firstColor="#56585D"
+                secondColor="#DEDEDE"
+                mainStyles={{
+                  color: null,
+                }}
               >
-                <FaRegClock />
-                {neededTime} min read
-              </Text>
+                <Text fontWeight="bold" fontSize={13}>
+                  {date}
+                </Text>
+              </ColorModeComponent>
+              <ColorModeComponent
+                firstColor="#56585D"
+                secondColor="#DEDEDE"
+                mainStyles={{
+                  color: null,
+                }}
+              >
+                <Text
+                  fontSize={13}
+                  display="inline-flex"
+                  alignItems="center"
+                  gap={1}
+                >
+                  <FaRegClock />
+                  {neededTime} min read
+                </Text>
+              </ColorModeComponent>
             </Flex>
           </Flex>
           <Flex alignItems="center" gap={2}>

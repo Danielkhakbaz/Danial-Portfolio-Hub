@@ -12,10 +12,18 @@ const NotFound = async () => {
         gap={8}
         paddingY={8}
       >
-        <Heading size="2xl" fontWeight="bold" marginBottom={4}>
+        <Heading
+          size={{ base: "xl", md: "2xl" }}
+          fontWeight="bold"
+          marginBottom={4}
+        >
           NOT FOUND!
         </Heading>
-        <Heading as="h3" fontWeight="extrabold" fontSize="15rem">
+        <Heading
+          as="h3"
+          fontWeight="extrabold"
+          fontSize={{ base: "8rem", md: "15rem" }}
+        >
           404
         </Heading>
         <Flex flexDirection="column" textAlign="center" marginTop={8}>

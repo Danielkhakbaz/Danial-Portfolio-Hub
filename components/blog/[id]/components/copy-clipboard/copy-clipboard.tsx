@@ -32,7 +32,11 @@ const CopyClipboard = () => {
       label="Copy to clipboard"
       backgroundColor={useColorModeValue("#805AD5", "#FBD38D")}
     >
-      <Button colorScheme="gray" onClick={handleClipboard}>
+      <Button
+        colorScheme="gray"
+        aria-label="copy-clipboard"
+        onClick={handleClipboard}
+      >
         <FaRegCopy />
       </Button>
     </Tooltip>

@@ -28,8 +28,8 @@ const Messages = async () => {
   return (
     <Flex flexDirection="column" gap={6}>
       {messages.map((message) => (
-        <Flex key={message.id} alignItems="flex-start" gap={2}>
-          <Flex width="5%">
+        <Flex key={message.id} alignItems="center" gap={2}>
+          <Flex width="5.5%">
             {message.image ? (
               <Flex width="100%" height="100%">
                 <Image
@@ -58,12 +58,20 @@ const Messages = async () => {
               </Text>
             )}
           </Flex>
-          <Flex width="95%">
+          <Flex width="94.5%">
             <Heading fontSize={14} color="gray">
               <Text as="span" display="inline-flex" alignItems="center" gap={1}>
-                {message.user} {isAdmin && <DeleteButton id={message.id} />}
-              </Text>
-              :{" "}
+                <ColorModeComponent
+                  firstColor="black"
+                  secondColor="white"
+                  mainStyles={{
+                    color: null,
+                  }}
+                >
+                  <Text>{message.user}: </Text>
+                </ColorModeComponent>{" "}
+                {isAdmin && <DeleteButton id={message.id} />}
+              </Text>{" "}
               <ColorModeComponent
                 firstColor="black"
                 secondColor="white"

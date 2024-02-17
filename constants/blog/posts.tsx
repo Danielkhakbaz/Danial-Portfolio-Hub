@@ -45,18 +45,20 @@ export const blogPosts: BlogPostsType = [
         <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>
-          <li>
-            <Link
-              as={NextLink}
-              isExternal
-              href="https://stackoverflow.com/questions/35432749/disable-web-security-in-chrome-48"
-              _hover={{
-                textDecoration: "underline",
-              }}
-            >
-              Stack Overflow
-            </Link>
-          </li>
+          <ul>
+            <li>
+              <Link
+                as={NextLink}
+                isExternal
+                href="https://stackoverflow.com/questions/35432749/disable-web-security-in-chrome-48"
+                _hover={{
+                  textDecoration: "underline",
+                }}
+              >
+                Stack Overflow
+              </Link>
+            </li>
+          </ul>
         </Flex>
       </Flex>
     ),
@@ -126,18 +128,20 @@ export const blogPosts: BlogPostsType = [
         <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>
-          <li>
-            <Link
-              as={NextLink}
-              isExternal
-              href="https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac"
-              _hover={{
-                textDecoration: "underline",
-              }}
-            >
-              Stack Overflow
-            </Link>
-          </li>
+          <ul>
+            <li>
+              <Link
+                as={NextLink}
+                isExternal
+                href="https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac"
+                _hover={{
+                  textDecoration: "underline",
+                }}
+              >
+                Stack Overflow
+              </Link>
+            </li>
+          </ul>
         </Flex>
       </Flex>
     ),
@@ -190,18 +194,20 @@ export const blogPosts: BlogPostsType = [
         <Divider />
         <Flex flexDirection="column" gap={2}>
           <Heading size="md">Sources</Heading>
-          <li>
-            <Link
-              as={NextLink}
-              isExternal
-              href="https://askubuntu.com/questions/217893/how-to-delete-a-non-empty-directory-in-terminal"
-              _hover={{
-                textDecoration: "underline",
-              }}
-            >
-              Ask Ubuntu
-            </Link>
-          </li>
+          <ul>
+            <li>
+              <Link
+                as={NextLink}
+                isExternal
+                href="https://askubuntu.com/questions/217893/how-to-delete-a-non-empty-directory-in-terminal"
+                _hover={{
+                  textDecoration: "underline",
+                }}
+              >
+                Ask Ubuntu
+              </Link>
+            </li>
+          </ul>
         </Flex>
       </Flex>
     ),

@@ -34,6 +34,9 @@ const Card = async ({ link, imageSrc, alt, title, description }: CardProps) => {
             height="150"
             src={imageSrc}
             alt={alt}
+            rel="preload"
+            priority
+            fetchPriority="high"
             style={{
               borderRadius: "0.4rem",
             }}

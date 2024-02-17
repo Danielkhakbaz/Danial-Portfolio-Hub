@@ -44,6 +44,9 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
               height={70}
               src={experience.logo.src}
               alt={experience.logo.alt}
+              rel="preload"
+              priority
+              fetchPriority="high"
             />
           </ColorModeComponent>
         </Flex>
@@ -72,7 +75,7 @@ const ExperinceCard = async ({ experience }: ExperiencesProps) => {
             </Text>
           </Flex>
           <Flex>
-            <Text fontWeight="bold" fontSize={12} opacity={0.6}>
+            <Text fontWeight="bold" fontSize={12} opacity={0.8}>
               {experience.timeline}
             </Text>
           </Flex>

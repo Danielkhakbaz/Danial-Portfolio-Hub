@@ -26,12 +26,13 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialAtCafe}
-            width={233}
-            height={400}
+            width={500}
+            height={500}
             alt="Danial Khakbaz at cafe"
             placeholder="blur"
             rel="preload"
             priority
+            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",
@@ -52,12 +53,13 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialPlayingBasketball}
-            width={233}
-            height={233}
+            width={500}
+            height={500}
             alt="Danial Khakbaz playing basketball"
             placeholder="blur"
             rel="preload"
             priority
+            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",
@@ -75,12 +77,13 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialAtShomal}
-            width={358}
-            height={150}
+            width={500}
+            height={500}
             alt="Danial Khakbaz at the north of Iran"
             placeholder="blur"
             rel="preload"
             priority
+            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",
@@ -99,12 +102,13 @@ const ImagesGrid = () => {
         <Flex width="100%" height="100%">
           <Image
             src={DanialFromWorkAtHome}
-            width={120}
-            height={233}
+            width={500}
+            height={500}
             alt="Danial Khakbaz working from home"
             placeholder="blur"
             rel="preload"
             priority
+            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",

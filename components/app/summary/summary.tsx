@@ -30,6 +30,9 @@ const Summary = async () => {
             height={90}
             src={DanialKhakbazProfile}
             alt="Danial Khakbaz's image"
+            rel="preload"
+            priority
+            fetchPriority="high"
           />
         </ColorModeComponent>
       </Center>

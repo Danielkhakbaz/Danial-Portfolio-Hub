@@ -9,8 +9,9 @@ const ProjectsPage = async () => {
       <Flex flexDirection="column" gap={6}>
         <Heading>Projects</Heading>
         <Grid
+          minHeight={{ base: "1800px", md: "900px" }}
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-          gap={6}
+          gap={{ base: 2, md: 6 }}
         >
           {projects.map((project) => (
             <GridItem key={project.link}>

@@ -39,7 +39,7 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
     <PageTransition>
       <Flex flexDirection="column" gap={4}>
         <Flex gap={4}>
-          <Link href="/projects" aria-label="back-button">
+          <Link href="/projects">
             <ColorModeComponent
               firstColor="black"
               secondColor="white"
@@ -47,7 +47,7 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
                 borderColor: null,
               }}
             >
-              <Button variant="outline">
+              <Button variant="outline" aria-label="back-button">
                 <FaArrowLeft />
               </Button>
             </ColorModeComponent>
@@ -89,7 +89,9 @@ const ProjectsID = async ({ params }: ProjectsIDProps) => {
               height={400}
               src={image.src}
               alt={image.alt}
+              rel="preload"
               priority
+              fetchPriority="high"
               style={{
                 borderRadius: "0.4rem",
               }}

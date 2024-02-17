@@ -8,7 +8,11 @@ const Signout = () => {
     await signOut();
   };
 
-  return <Link onClick={handleSignOut}>Sign out</Link>;
+  return (
+    <Link href="" onClick={handleSignOut}>
+      Sign out
+    </Link>
+  );
 };
 
 export default Signout;

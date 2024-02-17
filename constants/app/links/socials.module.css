@@ -1,7 +1,0 @@
-.links__item {
-  font-size: 30px;
-  transition: opacity 0.2s;
-}
-.links__item:hover {
-  opacity: 0.85;
-}

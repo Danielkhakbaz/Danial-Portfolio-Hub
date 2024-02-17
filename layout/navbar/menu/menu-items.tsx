@@ -6,7 +6,9 @@ import { usePathname } from "next/navigation";
 import { menuItems } from "constants/layout/navbar/menu/menu-items";
 import { Link, Flex, useColorModeValue } from "@chakra-ui/react";
 
-const MotionComponent = dynamic(() => import("utils/motion/motion"));
+const MotionComponent = dynamic(() => import("utils/motion/motion"), {
+  ssr: false,
+});
 
 const WebMenuItems = () => {
   const path = usePathname();

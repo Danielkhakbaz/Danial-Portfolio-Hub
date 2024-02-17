@@ -1,7 +1,11 @@
 "use client";
 
-import CountUp from "react-countup";
+import dynamic from "next/dynamic";
 import { FaRegEye } from "react-icons/fa6";
+
+const CountUp = dynamic(() => import("react-countup"), {
+  ssr: false,
+});
 
 type CountViewProps = {
   view: number;

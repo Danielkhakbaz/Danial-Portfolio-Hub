@@ -8,7 +8,6 @@ import {
   FaLinkedinIn,
   FaSpotify,
 } from "react-icons/fa6";
-import styles from "constants/app/links/socials.module.css";
 
 type SocialsType = {
   link: string;
@@ -22,9 +21,10 @@ export const socials: SocialsType[] = [
     name: "Email address",
     logo: (
       <FaEnvelope
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#D3D3D3",
+          transition: "opacity 0.2s",
         }}
       />
     ),
@@ -34,9 +34,10 @@ export const socials: SocialsType[] = [
     name: "Telegram account",
     logo: (
       <FaTelegramPlane
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#0088CC",
+          transition: "opacity 0.2s",
         }}
       />
     ),
@@ -46,9 +47,10 @@ export const socials: SocialsType[] = [
     name: "Twitter account",
     logo: (
       <FaXTwitter
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#1DA1F2",
+          transition: "opacity 0.2s",
         }}
       />
     ),
@@ -58,9 +60,10 @@ export const socials: SocialsType[] = [
     name: "Instagram page",
     logo: (
       <FaInstagram
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#DD2A7B",
+          transition: "opacity 0.2s",
         }}
       />
     ),
@@ -70,9 +73,10 @@ export const socials: SocialsType[] = [
     name: "Github page",
     logo: (
       <FaGithub
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#818288",
+          transition: "opacity 0.2s",
         }}
       />
     ),
@@ -82,9 +86,10 @@ export const socials: SocialsType[] = [
     name: "Linkedin page",
     logo: (
       <FaLinkedinIn
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#0077B5",
+          transition: "opacity 0.2s",
         }}
       />
     ),
@@ -94,9 +99,10 @@ export const socials: SocialsType[] = [
     name: "Spotify page",
     logo: (
       <FaSpotify
-        className={styles.links__item}
         style={{
+          fontSize: "30px",
           color: "#1ED760",
+          transition: "opacity 0.2s",
         }}
       />
     ),

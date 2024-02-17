@@ -14,6 +14,9 @@ const Links = async () => {
             href={social.link}
             aria-label={`Danial Khakbaz's ${social.name}`}
             isExternal
+            _hover={{
+              opacity: 0.85,
+            }}
           >
             {social.logo}
           </Link>

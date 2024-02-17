@@ -1,8 +1,12 @@
 "use client";
 
 import { ReactNode } from "react";
-import MotionComponent from "utils/motion/motion";
+import dynamic from "next/dynamic";
 import { useMediaQuery } from "@chakra-ui/react";
+
+const MotionComponent = dynamic(() => import("utils/motion/motion"), {
+  ssr: false,
+});
 
 type PageTransitionProps = {
   children: ReactNode;

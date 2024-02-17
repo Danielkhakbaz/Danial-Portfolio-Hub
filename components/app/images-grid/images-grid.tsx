@@ -30,6 +30,7 @@ const ImagesGrid = () => {
             height={400}
             alt="Danial Khakbaz at cafe"
             placeholder="blur"
+            rel="preload"
             priority
             style={{
               width: "100%",
@@ -55,6 +56,7 @@ const ImagesGrid = () => {
             height={233}
             alt="Danial Khakbaz playing basketball"
             placeholder="blur"
+            rel="preload"
             priority
             style={{
               width: "100%",
@@ -77,6 +79,7 @@ const ImagesGrid = () => {
             height={150}
             alt="Danial Khakbaz at the north of Iran"
             placeholder="blur"
+            rel="preload"
             priority
             style={{
               width: "100%",
@@ -100,6 +103,7 @@ const ImagesGrid = () => {
             height={233}
             alt="Danial Khakbaz working from home"
             placeholder="blur"
+            rel="preload"
             priority
             style={{
               width: "100%",

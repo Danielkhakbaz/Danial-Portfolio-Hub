@@ -4,7 +4,7 @@ import { Flex, Tooltip, Text, Badge } from "@chakra-ui/react";
 const Interests = async () => {
   return (
     <HomePageSectionMaker label="Interests">
-      <Flex width="50%" flexWrap="wrap" gap={4}>
+      <Flex width={{ base: "100%", md: "50%" }} flexWrap="wrap" gap={4}>
         <Tooltip
           hasArrow
           label={

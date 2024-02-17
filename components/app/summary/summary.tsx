@@ -7,13 +7,14 @@ const Summary = async () => {
   return (
     <Flex
       flexDirection={{ base: "column", sm: "row" }}
+      alignItems={{ base: "normal", md: "flex-start" }}
       gap={{ base: 4, sm: 0 }}
     >
       <Flex flex="82%" flexDirection="column" gap={2}>
         <Heading size="2xl">Danial Khakbaz</Heading>
         <Text>- Front-end Developer(Next.js, Typescript)</Text>
       </Flex>
-      <Center>
+      <Center display="flex" alignItems="flex-start">
         <ColorModeComponent
           firstColor="black"
           secondColor="white"

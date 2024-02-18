@@ -1,6 +1,5 @@
 "use client";
 
-import { deleteMessage } from "actions/guestbook";
 import { FaDeleteLeft } from "react-icons/fa6";
 
 type DeleteButtonProps = {
@@ -8,9 +7,15 @@ type DeleteButtonProps = {
 };
 
 const DeleteButton = ({ id }: DeleteButtonProps) => {
+  const handleDelete = async (id: number) => {
+    const { deleteMessage } = await import("actions/guestbook");
+
+    deleteMessage(id);
+  };
+
   return (
     <FaDeleteLeft
-      onClick={() => deleteMessage(id)}
+      onClick={() => handleDelete(id)}
       style={{ color: "#F56565", display: "inline" }}
     />
   );

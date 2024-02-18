@@ -1,10 +1,11 @@
 "use client";
 
-import { signOut } from "next-auth/react";
 import { Link } from "@chakra-ui/react";
 
 const Signout = () => {
   const handleSignOut = async () => {
+    const { signOut } = await import("next-auth/react");
+
     await signOut();
   };
 

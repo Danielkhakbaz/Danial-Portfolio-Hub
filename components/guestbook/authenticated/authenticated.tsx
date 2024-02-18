@@ -2,7 +2,6 @@
 
 import { NextResponse } from "next/server";
 import Signout from "components/guestbook/authenticated/components/sign-out/sign-out";
-import { addMessage } from "actions/guestbook";
 import {
   Flex,
   FormControl,
@@ -20,6 +19,8 @@ type AuthenticatedProps = {
 
 const Authenticated = ({ image, user }: AuthenticatedProps) => {
   const messageAction = async (data: FormData) => {
+    const { addMessage } = await import("actions/guestbook");
+
     const message = data.get("message");
 
     if (!message || typeof message !== "string") {

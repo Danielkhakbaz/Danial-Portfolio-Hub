@@ -1,11 +1,12 @@
 "use client";
 
-import { signIn } from "next-auth/react";
 import { Button, useColorModeValue } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 
 const Unauthenticated = () => {
   const handleSignIn = async () => {
+    const { signIn } = await import("next-auth/react");
+
     await signIn("github");
   };
 

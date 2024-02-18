@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import PageTransition from "utils/page-transition/page-transition";
 import Card from "components/projects/card/card";
 import { projects } from "constants/projects/projects";
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/react";
+
+export const metadata: Metadata = {
+  title: "Danial Khakbaz | Projects",
+  description: "here's where all my projects are.",
+};
 
 const ProjectsPage = async () => {
   return (

@@ -23,16 +23,17 @@ const ImagesGrid = () => {
         gridRow={{ base: "1/4", md: "1/6" }}
         gridColumn={{ base: "1/3", md: "1/3" }}
       >
-        <Flex width="100%" height="100%">
+        <Flex
+          height={{ base: "12rem", md: "100%" }}
+          position="relative"
+          marginBottom={4}
+        >
           <Image
             src={DanialAtCafe}
-            width={800}
-            height={800}
+            sizes="(max-width: 768px) 213px, 40vw"
             alt="Danial Khakbaz at cafe"
-            placeholder="blur"
-            rel="preload"
+            fill
             priority
-            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",
@@ -50,16 +51,17 @@ const ImagesGrid = () => {
         gridRow={{ base: "4/7", md: "1/4" }}
         gridColumn={{ base: "1/5", md: "3/5" }}
       >
-        <Flex width="100%" height="100%">
+        <Flex
+          height={{ base: "12rem", md: "100%" }}
+          position="relative"
+          marginBottom={4}
+        >
           <Image
             src={DanialPlayingBasketball}
-            width={800}
-            height={800}
+            sizes="(max-width: 768px) 450px, 80vw"
             alt="Danial Khakbaz playing basketball"
-            placeholder="blur"
-            rel="preload"
+            fill
             priority
-            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",
@@ -74,16 +76,17 @@ const ImagesGrid = () => {
         gridRow={{ base: "1/4", md: "4/6" }}
         gridColumn={{ base: "3/7", md: "3/6" }}
       >
-        <Flex width="100%" height="100%">
+        <Flex
+          height={{ base: "12rem", md: "100%" }}
+          position="relative"
+          marginBottom={4}
+        >
           <Image
             src={DanialAtShomal}
-            width={800}
-            height={800}
+            sizes="(max-width: 768px) 450px, 80vw"
             alt="Danial Khakbaz at the north of Iran"
-            placeholder="blur"
-            rel="preload"
+            fill
             priority
-            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",
@@ -99,16 +102,17 @@ const ImagesGrid = () => {
         gridRow={{ base: "4/7", md: "1/4" }}
         gridColumn={{ base: "5/7", md: "5/6" }}
       >
-        <Flex width="100%" height="100%">
+        <Flex
+          height={{ base: "12rem", md: "100%" }}
+          position="relative"
+          marginBottom={4}
+        >
           <Image
             src={DanialFromWorkAtHome}
-            width={800}
-            height={800}
+            sizes="(max-width: 768px) 213px, 40vw"
             alt="Danial Khakbaz working from home"
-            placeholder="blur"
-            rel="preload"
+            fill
             priority
-            fetchPriority="high"
             style={{
               width: "100%",
               height: "100%",

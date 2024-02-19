@@ -4,6 +4,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const nextConfig = {
   swcMinify: true,
+  experimental: {
+    ppr: true,
+  },
   images: {
     remotePatterns: [
       {

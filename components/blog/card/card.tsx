@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "utils/color-mode-component/color-mode-component";
 import CountView from "utils/count-view/count-view";
+import SkeletonView from "components/blog/components/skeleton-view/skeleton-view";
 import { getBlogPost } from "actions/blog";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
@@ -66,7 +68,9 @@ const Card = async ({ id, title, date, coverImage, alt }: CardProps) => {
             alignItems="center"
             gap={1}
           >
-            <CountView view={post!.view} />
+            <Suspense fallback={<SkeletonView />}>
+              <CountView view={post!.view} />
+            </Suspense>
           </Text>
         </Flex>
       </Flex>

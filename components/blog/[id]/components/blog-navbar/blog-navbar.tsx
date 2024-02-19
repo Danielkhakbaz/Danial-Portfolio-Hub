@@ -1,8 +1,10 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import ColorModeComponent from "utils/color-mode-component/color-mode-component";
 import Views from "components/blog/[id]/components/blog-navbar/components/views/views";
 import CopyClipboard from "components/blog/[id]/components/copy-clipboard/copy-clipboard";
+import SkeletonView from "components/blog/components/skeleton-view/skeleton-view";
 import { getBlogPost } from "actions/blog";
 import { Flex, Button, Heading, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaRegClock } from "react-icons/fa6";
@@ -116,7 +118,9 @@ const BlogNavbar = async ({
             </Flex>
           </Flex>
           <Flex alignItems="center" gap={2}>
-            <Views id={post!.id} />
+            <Suspense fallback={<SkeletonView />}>
+              <Views id={post!.id} />
+            </Suspense>
             <CopyClipboard />
           </Flex>
         </Flex>

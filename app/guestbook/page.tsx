@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
 import NextLink from "next/link";
-// import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import { getServerSession } from "next-auth";
-import Authenticated from "../../components/guestbook/authenticated/authenticated";
-import Unauthenticated from "../../components/guestbook/unauthenticated/unauthenticated";
 import PageTransition from "utils/page-transition/page-transition";
 import Messages from "components/guestbook/messages/messages";
 import { authOptions } from "auth/authOptions";
 import { Flex, Heading, Text, Link, Divider } from "@chakra-ui/react";
 
-// const Authenticated = dynamic(
-//   () => import("components/guestbook/authenticated/authenticated")
-// );
-// const Unauthenticated = dynamic(
-//   () => import("components/guestbook/unauthenticated/unauthenticated")
-// );
+const Authenticated = dynamic(
+  () => import("components/guestbook/authenticated/authenticated")
+);
+const Unauthenticated = dynamic(
+  () => import("components/guestbook/unauthenticated/unauthenticated")
+);
 
 export const metadata: Metadata = {
   title: "Danial Khakbaz | Guestbook",

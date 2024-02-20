@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import { NextResponse } from "next/server";
 import SumbitButton from "components/guestbook/authenticated/components/submit-button/submit-button";
 import Signout from "components/guestbook/authenticated/components/sign-out/sign-out";
@@ -17,6 +18,8 @@ type AuthenticatedProps = {
 };
 
 const Authenticated = ({ image, user }: AuthenticatedProps) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const messageAction = async (data: FormData) => {
     const { addMessage } = await import("actions/guestbook");
 
@@ -37,7 +40,15 @@ const Authenticated = ({ image, user }: AuthenticatedProps) => {
   return (
     <Flex>
       <FormControl>
-        <form action={messageAction}>
+        <form
+          autoComplete="off"
+          ref={formRef}
+          action={() => {
+            messageAction;
+
+            formRef.current?.reset();
+          }}
+        >
           <FormLabel>Sign my guestbook</FormLabel>
           <Flex gap={2}>
             <Input

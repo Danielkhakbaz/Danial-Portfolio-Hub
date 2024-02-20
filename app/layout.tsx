@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "layout/navbar/navbar";
 import Footer from "layout/footer/footer";
 import ScrollToTop from "utils/scroll-to-top/scroll-to-top";
@@ -39,6 +40,7 @@ const RootLayout = async ({ children, session }: RootLayoutProps) => {
             <Navbar />
             <Container maxWidth="container.sm" paddingY={6}>
               {children}
+              <SpeedInsights />
             </Container>
             <Footer />
             <ScrollToTop />

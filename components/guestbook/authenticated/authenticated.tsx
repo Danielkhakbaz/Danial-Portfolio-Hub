@@ -1,15 +1,14 @@
 "use client";
 
 import { NextResponse } from "next/server";
+import SumbitButton from "components/guestbook/authenticated/components/submit-button/submit-button";
 import Signout from "components/guestbook/authenticated/components/sign-out/sign-out";
 import {
   Flex,
   FormControl,
   FormLabel,
   Input,
-  Button,
   FormHelperText,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 type AuthenticatedProps = {
@@ -47,12 +46,7 @@ const Authenticated = ({ image, user }: AuthenticatedProps) => {
               placeholder="Write anything you want..."
               isRequired
             />
-            <Button
-              colorScheme={useColorModeValue("purple", "yellow")}
-              type="submit"
-            >
-              Submit
-            </Button>
+            <SumbitButton />
           </Flex>
           <FormHelperText>
             <Signout />

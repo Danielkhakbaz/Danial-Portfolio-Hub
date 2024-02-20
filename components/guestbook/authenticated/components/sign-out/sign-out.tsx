@@ -7,10 +7,12 @@ const Signout = () => {
     const { signOut } = await import("next-auth/react");
 
     await signOut();
+
+    
   };
 
   return (
-    <Link href="" onClick={handleSignOut}>
+    <Link href="/guestbook" onClick={handleSignOut}>
       Sign out
     </Link>
   );

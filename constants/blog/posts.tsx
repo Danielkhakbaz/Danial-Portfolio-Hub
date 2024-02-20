@@ -22,7 +22,7 @@ type BlogPostsType = {
 
 export const blogPosts: BlogPostsType = [
   {
-    id: 1,
+    id: 11,
     link: "how-to-kill-process-on-mac",
     title: "How to kill process on MacOS",
     author: "Danial Khakbaz",
@@ -64,7 +64,7 @@ export const blogPosts: BlogPostsType = [
     ),
   },
   {
-    id: 2,
+    id: 12,
     link: "how-to-disable-cors-on-chrome",
     title: "How to disable CORS on chrome",
     author: "Danial Khakbaz",
@@ -147,7 +147,7 @@ export const blogPosts: BlogPostsType = [
     ),
   },
   {
-    id: 3,
+    id: 13,
     link: "how-to-delete-directories-on-mac",
     title: "How to delete directories on MacOS",
     author: "Danial Khakbaz",

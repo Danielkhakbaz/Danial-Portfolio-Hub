@@ -14,6 +14,7 @@ export async function POST(request: NextRequest) {
 
   const post = await Prisma.blogPost.create({
     data: {
+      id: body.id,
       title: body.title,
     },
   });
@@ -21,4 +22,21 @@ export async function POST(request: NextRequest) {
   return NextResponse.json(post, {
     status: 201,
   });
+}
+
+export async function DELETE(request: NextRequest) {
+  const body = await request.json();
+
+  await Prisma.blogPost.delete({
+    where: {
+      id: body.id,
+    },
+  });
+
+  return NextResponse.json(
+    { message: "Delete was successfull!" },
+    {
+      status: 200,
+    }
+  );
 }

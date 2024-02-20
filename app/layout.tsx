@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   other: {
-    "theme-color": "#0D1117",
+    "theme-color": "#FFF",
     "color-scheme": "dark",
     "twitter:image": "/logos/dk-logo-black.webp",
     "twitter:card": "summary_large_image",
-    "og:url": "",
+    "og:url": "https://danieloo.vercel.app/",
     "og:image": "/logos/dk-logo-black.webp",
     "og:type": "website",
   },

@@ -7,8 +7,6 @@ const Signout = () => {
     const { signOut } = await import("next-auth/react");
 
     await signOut();
-
-    
   };
 
   return (

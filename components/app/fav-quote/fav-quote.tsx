@@ -1,7 +1,9 @@
+"use client";
+
 import { quotes } from "constants/app/fav-quote/quotes";
 import { Center, Flex, Text } from "@chakra-ui/react";
 
-const FavQuote = async () => {
+const FavQuote = () => {
   const randomNumberBetween0and2 = Math.floor(Math.random() * 4);
 
   return (

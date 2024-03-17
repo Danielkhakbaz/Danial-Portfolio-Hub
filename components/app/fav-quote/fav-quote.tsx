@@ -1,10 +1,15 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { quotes } from "constants/app/fav-quote/quotes";
 import { Center, Flex, Text } from "@chakra-ui/react";
 
 const FavQuote = () => {
-  const randomNumberBetween0and2 = Math.floor(Math.random() * 4);
+  const [randomNumber, setRandomNumber] = useState<number>(0);
+
+  useEffect(() => {
+    setRandomNumber(Math.floor(Math.random() * 4));
+  }, []);
 
   return (
     <Center
@@ -18,9 +23,9 @@ const FavQuote = () => {
     >
       <Flex width="100%" justifyContent="center">
         <Text display="inline-flex" alignItems="center" gap={2}>
-          {quotes[randomNumberBetween0and2].text}
+          {quotes[randomNumber].text}
           <Text as="span" fontSize={10} color="#969696">
-            - {quotes[randomNumberBetween0and2].author}
+            - {quotes[randomNumber].author}
           </Text>
         </Text>
       </Flex>
